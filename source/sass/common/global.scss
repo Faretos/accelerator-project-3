@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $primary-text-color;
+  background-color: #ffffff;
+}

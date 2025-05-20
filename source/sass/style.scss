@@ -2,3 +2,14 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
+// COMMON
+
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/global";
+@import "./common/fonts";
+
+// BLOCKS
+
+
