@@ -1,29 +1,33 @@
 const body = document.body;
 const main = body.querySelector('main');
 const burgerMenuButton = document.querySelector('.hero__menu-button');
-const navList = document.querySelector('.hero__navigation');
-const navLinks = document.querySelectorAll('.navigation__link');
-const navButtons = document.querySelectorAll('.navigation__button');
-const navItems = document.querySelectorAll('.navitagion__item');
+const navigation = document.querySelector('.hero__navigation');
+const navList = navigation.querySelector('.navigation__list');
+const navLinks = navigation.querySelectorAll('.navigation__link');
+const navButtons = navigation.querySelectorAll('.navigation__button');
+const navItems = navigation.querySelectorAll('.navitagion__item');
 
 function burgerMenuToggle() {
   const isOpened = burgerMenuButton.classList.toggle('hero__menu-button--open');
-  navList.classList.toggle('hero__navigation--open');
+  navigation.classList.toggle('hero__navigation--open');
 
   if (isOpened) {
+    navList.style.display = 'block';
     body.classList.add('page-body--no-scroll');
     main.classList.add('main-container--color');
     addNavLinksListeners();
   } else {
+    navList.style.display = 'none';
     body.classList.remove('page-body--no-scroll');
     main.classList.remove('main-container--color');
+    removeNavItemsClass();
     removeNavLinksListeners();
   }
 }
 
 function closeBurgerMenu() {
   burgerMenuButton.classList.remove('hero__menu-button--open');
-  navList.classList.remove('hero__navigation--open');
+  navigation.classList.remove('hero__navigation--open');
   body.classList.remove('page-body--no-scroll');
   main.classList.remove('main-container--color');
   removeNavItemsClass();
@@ -50,9 +54,7 @@ function removeNavLinksListeners() {
 
 function removeNavItemsClass() {
   navItems.forEach((item) => {
-    if (item.classList.contains('navitagion__item--item-with-list-open')) {
-      item.classList.remove('navitagion__item--item-with-list-open');
-    }
+    item.classList.remove('navitagion__item--item-with-list-open');
   });
 }
 
@@ -70,7 +72,7 @@ function initBurgerMenu() {
 }
 
 body.addEventListener('click', (event) => {
-  if(!navList.contains(event.target) && !burgerMenuButton.contains(event.target)) {
+  if(!navigation.contains(event.target) && !burgerMenuButton.contains(event.target)) {
     closeBurgerMenu();
   }
 });

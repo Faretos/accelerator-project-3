@@ -23,7 +23,7 @@
   padding: 1px 0;
 }
 
-.hero__logo {
+.hero__image-wrapper img {
   display: block;
 }
 
@@ -31,7 +31,7 @@
   position: relative;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, color 0.3s ease-in, background-color 0.3s ease;
   width: 136px;
   margin: 0 0 0 auto;
   padding: 19px 71px 19px 20px;
@@ -44,15 +44,6 @@
   border: 1px solid $primary-button-bg-color;
   border-radius: 30px;
 
-  &::after {
-    @include pseudo(46px, 46px);
-
-    top: 3px;
-    right: 4px;
-    background-color: $primary-button-bg-color;
-    border-radius: 50%;
-  }
-
   &::before {
     @include pseudo(16px, 8px);
 
@@ -63,7 +54,18 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 100%;
+    transition: background-color 0.3s ease;
     background-color: $secondary-button-bg-color;
+  }
+
+  &::after {
+    @include pseudo(46px, 46px);
+
+    top: 3px;
+    right: 4px;
+    transition: background-color 0.3s ease;
+    background-color: $primary-button-bg-color;
+    border-radius: 50%;
   }
 }
 
@@ -95,20 +97,31 @@
 .hero__navigation {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+  max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
   padding: 33px 25px;
   background-color: $accent-bg-color;
   border-radius: 16px;
 }
 
 .hero__navigation--open {
-  opacity: 1;
   overflow: visible;
+  max-height: 1000px;
+  opacity: 1;
 }
 
-.hero__card-image {
+.hero__card img {
   display: block;
+  position: relative;
   object-fit: cover;
+
+  &::before {
+    @include pseudo(100%, 100%);
+
+    top: 0;
+    left: 0;
+    background-color: $primary-overlay-color;
+  }
 }
