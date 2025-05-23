@@ -14,6 +14,7 @@
 }
 
 .navigation__link {
+  display: block;
   font-family: $primary-font;
   font-size: 16px;
   line-height: 1;
@@ -41,21 +42,32 @@
   &::after {
     @include pseudo(8px, 8px);
 
-    top: 6px;
+    top: 2px;
     right: -20px;
-    transform: rotate(-45deg);
+    transform: rotate(135deg);
+    transition: transform 0.3s ease-in, top 0.3s ease-in;
     border-top: 1px solid $secondary-text-color;
     border-right: 1px solid $secondary-text-color;
   }
 }
 
+.navigation__item-list {
+  padding: 0 0 0 16px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: padding 0.3s ease, max-height 0.3s ease, opacity 0.3s ease;
+}
+
 .navitagion__item--item-with-list-open .navigation__item-list {
-  height: 100%;
   padding: 16px 0 0 16px;
+  max-height: 500px;
+  opacity: 1;
 }
 
 .navitagion__item--item-with-list-open .navigation__button {
   &::after {
+    top: 6px;
     transform: rotate(-45deg);
   }
 }

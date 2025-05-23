@@ -96,9 +96,8 @@
   grid-column: 1 / 3;
   grid-row: 2 / 3;
   opacity: 0;
-  max-height: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+  transition: opacity 0.3s ease;
   padding: 33px 25px;
   background-color: $accent-bg-color;
   border-radius: 16px;
@@ -106,7 +105,6 @@
 
 .hero__navigation--open {
   opacity: 1;
-  max-height: 568px;
   overflow: visible;
 }
 
