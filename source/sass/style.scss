@@ -1,15 +1,15 @@
-// Vendor
-// ---------------------------------
-
-@import "vendor/normalize";
-
-// COMMON
-
+@import "./vendor/normalize";
+@import "../../node_modules/swiper/swiper-bundle";
 @import "./common/variables";
 @import "./common/mixins";
 @import "./common/global";
 @import "./common/fonts";
-
-// BLOCKS
-
-
+@import "./blocks/page";
+@import "./blocks/list-style-reset";
+@import "./blocks/title-reset";
+@import "./blocks/text-offset-reset";
+@import "./blocks/button";
+@import "./blocks/visually-hidden";
+@import "./blocks/main-container";
+@import "./blocks/hero";
+@import "./blocks/navigation";

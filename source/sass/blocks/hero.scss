@@ -1,0 +1,505 @@
+.hero {
+  position: relative;
+  min-height: 568px;
+  background-color: $secondary-bg-color;
+
+  @media (min-width: $tablet-width) {
+    min-height: 1024px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 800px;
+  }
+}
+
+.hero__header {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 0;
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px 15px 0;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 30px 45px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 30px 100px 0;
+  }
+}
+
+.hero__image-wrapper {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding: 1px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 2px 0;
+  }
+}
+
+.hero__image-wrapper img {
+  display: block;
+}
+
+.hero__menu-button {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  transition: width 0.3s ease, color 0.3s ease-in, background-color 0.3s ease;
+  width: 136px;
+  margin: 0 0 0 auto;
+  padding: 19px 71px 19px 20px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  text-align: left;
+  border: 1px solid $primary-button-bg-color;
+  border-radius: 30px;
+
+  &::before {
+    @include pseudo(16px, 8px);
+
+    top: 50%;
+    right: 19px;
+    z-index: 2;
+    transform: translateY(-50%);
+    mask-image: url("/__spritemap#sprite-burger-menu-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    transition: background-color 0.3s ease;
+    background-color: $secondary-button-bg-color;
+  }
+
+  &::after {
+    @include pseudo(46px, 46px);
+
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+    background-color: $primary-button-bg-color;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 71px 20px 20px;
+  }
+}
+
+.hero__menu-button--open {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  width: 100%;
+  background-color: $primary-button-bg-color;
+  color: $secondary-text-color;
+
+  &::before {
+    top: 50%;
+    right: 16px;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    mask-image: url("/__spritemap#sprite-burger-menu-cross-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $primary-button-bg-color;
+  }
+
+  &::after {
+    background-color: $secondary-button-bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 286px;
+  }
+}
+
+.hero__navigation {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  justify-self: flex-end;
+  width: 290px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  padding: 33px 25px;
+  background-color: $accent-bg-color;
+  border-radius: 16px;
+}
+
+.hero__navigation--open {
+  overflow: visible;
+  max-height: 568px;
+  opacity: 1;
+}
+
+.hero__content-wrapper {
+  min-height: 568px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 1024px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 800px;
+  }
+}
+
+.hero__wrapper {
+  min-height: 568px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 1024px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 800px;
+  }
+}
+
+.hero__card {
+  position: relative;
+  min-height: 568px;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  @media (min-width: $tablet-width) {
+    min-height: 1024px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 800px;
+  }
+}
+
+.hero__wrapper .swiper-slide:not(.swiper-slide-active) {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero__card-image-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+
+  &::before {
+    @include pseudo(100%, 100%);
+
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $primary-overlay-color;
+  }
+}
+
+.hero__card-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: $disabled-color;
+}
+
+.hero__card-content {
+  position: relative;
+  margin: 256px auto 20px;
+  z-index: 1;
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 659px;
+    margin: 687px 64px 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 968px;
+    margin: 687px 372px 60px 100px;
+  }
+}
+
+.hero__card--experience-abroad .hero__card-content {
+  margin: 229px auto 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 687px 64px 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 968px;
+    margin: 433px 372px 60px 100px;
+  }
+}
+
+.hero__card-title {
+  width: 290px;
+  padding: 21px 15px 15px 14px;
+  font-family: $primary-font;
+  font-size: 22px;
+  line-height: 1.18;
+  font-weight: 400;
+  color: $accent-text-color;
+  background-color: $secondary-bg-color;
+  border-radius: 0 16px 16px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 659px;
+    padding: 31px 69px 23px 40px;
+    font-size: 36px;
+    line-height: 1.22;
+    border-radius: 0 30px 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 968px;
+    padding: 41px 50px 30px;
+    font-size: 54px;
+    line-height: 1.14;
+  }
+}
+
+.hero__card-text-wrapper {
+  position: relative;
+  width: 267px;
+
+  &::after {
+    @include pseudo(8px,10px);
+
+    top: -1px;
+    right: -8px;
+    transform: rotate(90deg);
+    mask-image: url("/__spritemap#sprite-bubble-decor-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $secondary-button-bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 446px;
+  }
+}
+
+.hero__card-text-wrapper p {
+  width: 267px;
+  margin: 0;
+  padding: 0 14px 15px;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: $primary-text-color;
+  background-color: $secondary-bg-color;
+  border-radius: 0 0 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    padding: 0 0 35px 40px;
+    border-radius: 0 0 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 446px;
+    padding: 1px 0 34px 50px;
+    line-height: 1.62;
+  }
+}
+
+.hero__card-button-wrapper {
+  position: relative;
+  width: 184px;
+  padding: 10px 15px;
+  background-color: $secondary-bg-color;
+  border-radius: 0 0 14px 14px;
+
+  &::after {
+    @include pseudo(10px,10px);
+
+    top: 0;
+    right: -10px;
+    transform: rotate(90deg);
+    mask-image: url("/__spritemap#sprite-bubble-decor-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $secondary-button-bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 308px;
+    padding: 0 67px 70px 70px;
+    border-radius: 0 0 30px;
+
+    &::after {
+      right: -26px;
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 329px;
+    padding: 10px 50px 43px 80px;
+  }
+}
+
+.hero__card-button {
+  position: relative;
+  width: 154px;
+  padding: 16px 59px 14px 20px;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $accent-text-color;
+  background-color: $secondary-button-bg-color;
+  border: 1px solid $primary-button-bg-color;
+  border-radius: 30px;
+
+  &::before {
+    @include pseudo(34px, 34px);
+
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    background-color: $primary-button-bg-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include pseudo(8px, 8px);
+
+    top: 50%;
+    right: 17px;
+    transform: translateY(-50%);
+    mask-image: url("/__spritemap#sprite-arrow-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $secondary-button-bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 198px;
+    padding: 20px 81px 20px 30px;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+
+    &::before {
+      width: 46px;
+      height: 46px;
+    }
+
+    &::after {
+      right: 23px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 199px;
+    padding: 21px 82px 21px 30px;
+
+    &::before {
+      right: 5px;
+    }
+
+    &::after {
+      right: 24px;
+    }
+  }
+}
+
+.hero__wrapper .hero__pagination {
+  top: 201px;
+  bottom: auto;
+  left: 15px;
+  width: 80px;
+  padding: 4px 8px 6px;
+  background-color: $secondary-bg-color;
+  border-radius: 12px 12px 0 0;
+
+  &::after {
+    @include pseudo(10px,10px);
+
+    bottom: 0;
+    right: -10px;
+    mask-image: url("/__spritemap#sprite-bubble-decor-view");
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    mask-position: center;
+    background-color: $secondary-bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 647px;
+    left: 45px;
+    width: 100px;
+    padding: 12px 0 10px;
+    border-radius: 20px 20px 0 0;
+
+    &::after {
+      bottom: 0;
+      right: -20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 393px;
+    left: 100px;
+  }
+}
+
+.hero__wrapper .hero__pagination .hero__pagination-bullet {
+  margin: 0;
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: 2px solid $accent-bg-color;
+  border-radius: 50%;
+  opacity: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.hero__pagination .hero__pagination-bullet:not(:last-child) {
+  margin: 0 12px 0 0;
+}
+
+.hero__wrapper .hero__pagination .swiper-pagination-bullet-active {
+  background-color: $accent-bg-color;
+}

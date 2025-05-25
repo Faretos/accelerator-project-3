@@ -1,0 +1,16 @@
+.main-container {
+  flex-grow: 1;
+}
+
+.main-container--color {
+  position: relative;
+
+  &::before {
+    @include pseudo(100%, 100%);
+
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $secondary-overlay-color;
+  }
+}

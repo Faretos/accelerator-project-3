@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  min-width: $mobile-width;
+  flex-direction: column;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  background-color: $primary-bg-color;
+}
+
+.page-body--no-scroll {
+  overflow: hidden;
+}
