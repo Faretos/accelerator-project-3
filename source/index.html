@@ -169,8 +169,80 @@
     <!-- ABOUT -->
     <section class="about" data-test="about">
       <div class="about__wrapper">
-        <h2 class="about__title">О проекте «Стажировка»</h2>
-        <span class="about__subtitle">О проекте «Стажировка»</span>
+        <div class="about__title-wrapper">
+          <h2 class="about__title title-reset">О проекте «Стажировка»</h2>
+          <span class="about__subtitle">О проекте «Стажировка»</span>
+        </div>
+        <div class="about__text-wrapper">
+          <h3>Наша цель</h3>
+          <p>Наша деятельность направлена
+            на повышение квалификации молодых
+            специалистов на ранних и средних
+            стадиях карьеры, предоставляя
+            им инструменты для решения сложных
+            проблем, с которыми сталкиваются в мире.
+            Цель центра — наделить этих людей
+            способностью инициировать значимые
+            изменения.</p>
+          <button class="about__about-button button" type="button" id="modal-open">подробнее о проекте</button>
+        </div>
+        <ul class="about__list list-style-reset">
+          <li class="about__item">
+            <h4>Более 250 программ</h4>
+            <p>учебных и рабочих, разной
+              длительностью от 3 месяцев
+              до 1 года</p>
+          </li>
+          <li class="about__item">
+            <h4>Более 3000 участников</h4>
+            <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+          </li>
+          <li class="about__item">
+            <h4>участники из 60 стран</h4>
+            <p>студенты со всего мира приезжают на программу
+              «Стажировки» от 3 месяцев до 1 года</p>
+          </li>
+          <li class="about__item">
+            <h4>от 4 200 $
+              до 8 400 $</h4>
+            <p>грант всем участникам
+              для комфортного прохождения
+              программы</p>
+          </li>
+        </ul>
+      </div>
+      <!-- MODAL WINDOW -->
+      <div class="about__modal-window modal-window">
+        <div class="modal-window__wrapper">
+          <button class="modal-window__button button" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
+          <h3 class="modal-window__title title-reset">Напишите нам</h3>
+          <p class="modal-window__text text-offset-reset">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+          <form class="modal-window__form modal-form" method="post" action="https://echo.htmlacademy.ru" id="about-form">
+            <div class="modal-form__name-wrapper">
+              <label class="modal-form__label" for="name">Имя</label>
+              <input class="modal-form__input" type="text" name="name" id="name" required>
+            </div>
+            <div class="modal-form__phone-wrapper">
+              <label class="modal-form__label" for="phone">Телефон</label>
+              <input class="modal-form__input" type="tel" name="phone" id="phone" required>
+            </div>
+            <div class="modal-form__city-wrapper">
+              <label class="modal-form__label" for="city">Выберите город</label>
+              <select class="modal-form__select" name="city" id="city" required>
+                <option class="modal-form__select-option" value=""></option>
+                <option class="modal-form__select-option" value="Moscow">Москва</option>
+                <option class="modal-form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+              </select>
+            </div>
+            <div class="modal-form__personal data">
+              <label class="modal-form__label modal-form__label--checkbox" for="personal-data">Я согласен на обработку моих персональных данных</label>
+              <input class="modal-form__input modal-form__input--checkbox" type="checkbox" name="personal-data" id="personal-data" required>
+            </div>
+            <button class="modal-form__button button" type="submit">отправить</button>
+          </form>
+        </div>
       </div>
     </section>
     <div data-test="programs">programs</div>
