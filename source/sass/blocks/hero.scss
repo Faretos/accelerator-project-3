@@ -174,7 +174,9 @@
 }
 
 .hero__card {
+  display: flex;
   position: relative;
+  flex-direction: column;
   min-height: 568px;
   opacity: 1;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -219,8 +221,10 @@
 }
 
 .hero__card-content {
+  display: grid;
+  grid-template-columns: 1fr;
   position: relative;
-  margin: 256px auto 20px;
+  margin: auto auto 20px;
   z-index: 1;
   width: 290px;
 
@@ -228,25 +232,12 @@
     display: flex;
     flex-wrap: wrap;
     width: 659px;
-    margin: 687px 64px 60px 45px;
+    margin: auto 64px 60px 45px;
   }
 
   @media (min-width: $desktop-width) {
     width: 968px;
-    margin: 687px 372px 60px 100px;
-  }
-}
-
-.hero__card--experience-abroad .hero__card-content {
-  margin: 229px auto 20px;
-
-  @media (min-width: $tablet-width) {
-    margin: 687px 64px 60px 45px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 968px;
-    margin: 433px 372px 60px 100px;
+    margin: auto 372px 60px 100px;
   }
 }
 
