@@ -1,0 +1,238 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+  }
+}
+
+.form__wrapper {
+  width: 260px;
+  margin: 0 0 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    margin: 0 0 20px;
+  }
+}
+
+.form__wrapper:last-of-type {
+  margin: 0 0 24px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 21px;
+  }
+}
+
+.form__wrapper--personal-data {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+  }
+}
+
+.form__label {
+  display: block;
+  margin: 0 0 8px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $primary-text-color;
+  opacity: 0.8;
+
+  &--checkbox {
+    width: 230px;
+    margin: 0;
+    padding: 1px 0 0;
+    font-size: 12px;
+    line-height: 1.16;
+    opacity: 0.9;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 12px;
+    line-height: 1.43;
+
+    &--checkbox {
+      width: 100%;
+      padding: 5px 0 0 10px;
+      line-height: 1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 1.29;
+
+    &--checkbox {
+      line-height: 1;
+    }
+  }
+}
+
+.form__input {
+  position: relative;
+  width: 100%;
+  min-height: 44px;
+  padding: 5px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $primary-text-color;
+  border: 1px solid $input-border-color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
+  }
+}
+
+.form__wrapper--city {
+  position: relative;
+
+
+  &::after {
+    @include pseudo(16px, 16px);
+
+    top: 36px;
+    right: 20px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    mask-image: url("/__spritemap#sprite-arrow-down-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $primary-text-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: 49px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      top: 48px;
+    }
+  }
+}
+
+.form__wrapper--city-open {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.form__select {
+  appearance: none;
+  position: relative;
+  width: 100%;
+  min-height: 44px;
+  padding: 5px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $primary-text-color;
+  border: 1px solid $input-border-color;
+  border-radius: 8px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
+  }
+}
+
+.form__select:focus ~ .form__wrapper--city::after {
+  transform: rotate(180deg);
+}
+
+.form__input--checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  min-height: auto;
+  background-color: $accent-bg-color;
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  &::after {
+    @include pseudo(0, 0);
+
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    mask-image: url("/__spritemap#sprite-check-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $secondary-button-bg-color;
+  }
+}
+
+.form__input--checkbox:checked::after {
+  width: 10px;
+  height: 10px;
+}
+
+
+.form__button {
+  position: relative;
+  width: 260px;
+  padding: 15px 68px 13px 30px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  border: 1px solid $primary-button-bg-color;
+  border-radius: 30px;
+
+  &::before {
+    @include pseudo(34px, 34px);
+
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    background-color: $primary-button-bg-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include pseudo(8px, 8px);
+
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    mask-image: url("/__spritemap#sprite-arrow-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $secondary-button-bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 194px;
+    padding: 19px 80px 19px 29px;
+    font-size: 14px;
+
+    &::before {
+      width: 46px;
+      height: 46px;
+    }
+
+    &::after {
+      right: 21px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
