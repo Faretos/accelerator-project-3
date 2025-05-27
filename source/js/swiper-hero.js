@@ -20,6 +20,7 @@ const heroSwiper = new Swiper ('.hero__wrapper', {
       return `<span class="${ className } hero__pagination-bullet" tabindex="0"></span>`;
     }
   },
+  allowTouchMove: window.innerWidth < 1440,
   breakpoints: {
     768: {
       keyboard: {
