@@ -1,7 +1,6 @@
 import { pageState } from './page-state';
 
 const body = document.body;
-const menu = body.querySelector('main');
 const burgerMenuButton = document.querySelector('.hero__menu-button');
 const navigation = document.querySelector('.hero__navigation');
 const navList = navigation.querySelector('.navigation__list');
