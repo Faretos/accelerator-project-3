@@ -82,9 +82,13 @@
   width: 100%;
   min-height: 44px;
   padding: 5px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $primary-text-color;
   border: 1px solid $input-border-color;
   border-radius: 8px;
-  color: $primary-text-color;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
@@ -135,9 +139,13 @@
   width: 100%;
   min-height: 44px;
   padding: 5px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $primary-text-color;
   border: 1px solid $input-border-color;
   border-radius: 8px;
-  color: $primary-text-color;
 
   @media (min-width: $tablet-width) {
     min-height: 50px;

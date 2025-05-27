@@ -1,5 +1,15 @@
 .modal-window {
+  display: none;
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  z-index: 999;
+  transform: translateX(-50%);
   background-color: transparent;
+}
+
+.modal-window--open {
+  display: block;
 }
 
 .modal-window__wrapper {
