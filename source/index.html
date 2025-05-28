@@ -20,7 +20,7 @@
 </head>
 
 <body class="page__body">
-
+  <!-- MAIN -->
   <main class="main-container">
     <!-- HERO -->
     <section class="hero" data-test="hero">
@@ -91,7 +91,7 @@
       </header>
       <div class="hero__content-wrapper">
         <div class="hero__wrapper swiper">
-          <div class="swiper-wrapper">
+          <div class="hero__swiper-wrapper swiper-wrapper">
             <!-- SLIDE 1 -->
             <div class="hero__card swiper-slide hero__card--experience-abroad" tabindex="0">
               <div class="hero__card-image-wrapper">
@@ -250,7 +250,111 @@
       </div>
     </section>
     <!-- PROGRAMS -->
-    <section class="programs" data-test="programs"></section>
+    <section class="programs" data-test="programs">
+      <div class="programs__wrapper">
+        <h2 class="programs__title title-reset">Программы</h2>
+        <div class="programs__swiper swiper">
+          <div class="programs__slides-buttons-wrapper">
+            <button class="programs__prev-slide swiper-button-prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="programs__next-slide swiper-button-next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
+          </div>
+          <div class="programs__swiper-wrapper swiper-wrapper">
+            <!-- SLIDE 1 -->
+            <div class="programs__card swiper-slide" tabindex="0">
+              <div class="programs__card-img-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/programs/interns-desktop@1x.webp, ./img/programs/interns-desktop@2x.webp 2x" width="392" height="420">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/programs/interns-tablet@1x.webp, ./img/programs/interns-tablet@2x.webp 2x" width="324" height="420">
+                  <source type="image/webp" srcset="./img/programs/interns-mobile@1x.webp, ./img/programs/interns-mobile@2x.webp 2x" width="290" height="400">
+
+                  <source type="image/jpg" media="(min-width: 1400px)" srcset="./img/programs/interns-desktop@1x.jpg, ./img/programs/interns-desktop@2x.jpg 2x" width="392" height="420">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/programs/interns-tablet@1x.jpg, ./img/programs/interns-tablet@2x.jpg 2x" width="324" height="420">
+                  <img src="./img/programs/interns-mobile@1x.jpg" srcset="./img/programs/interns-mobile@2x.jpg 2x" width="290" height="400" alt="Студентки стажерки">
+                </picture>
+              </div>
+              <div class="programs__card-text-content">
+                <div class="programs__card-title-wrapper">
+                  <h3>Стажировки</h3>
+                </div>
+                <div class="programs__card-text-wrapper">
+                  <p>Получите незаменимый опыт
+                    работы в крупнейших мировых
+                    компаниях.</p>
+                </div>
+                <div class="programs__card-link-wrapper">
+                  <a class="programs__card-link" href="#">
+                    <span class="visually-hidden">Открыть программу</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="programs__card swiper-slide" tabindex="0">
+              <div class="programs__card-img-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/programs/volunteers-desktop@1x.webp, ./img/programs/volunteers-desktop@2x.webp 2x" width="392" height="420">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/programs/volunteers-tablet@1x.webp, ./img/programs/volunteers-tablet@2x.webp 2x" width="324" height="420">
+                  <source type="image/webp" srcset="./img/programs/volunteers-mobile@1x.webp, ./img/programs/volunteers-mobile@2x.webp 2x" width="290" height="400">
+
+                  <source type="image/jpg" media="(min-width: 1400px)" srcset="./img/programs/volunteers-desktop@1x.jpg, ./img/programs/volunteers-desktop@2x.jpg 2x" width="392" height="420">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/programs/volunteers-tablet@1x.jpg, ./img/programs/volunteers-tablet@2x.jpg 2x" width="324" height="420">
+                  <img src="./img/programs/volunteers-mobile@1x.jpg" srcset="./img/programs/volunteers-mobile@2x.jpg 2x" width="290" height="400" alt="Студент волонтер">
+                </picture>
+              </div>
+              <div class="programs__card-text-content">
+                <div class="programs__card-title-wrapper">
+                  <h3>Волонтёрство</h3>
+                </div>
+                <div class="programs__card-text-wrapper">
+                  <p>Помогайте другим и развивайте
+                    свои лидерские качества.</p>
+                </div>
+                <div class="programs__card-link-wrapper">
+                  <a class="programs__card-link" href="#">
+                    <span class="visually-hidden">Открыть программу</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 3 -->
+            <div class="programs__card swiper-slide" tabindex="0">
+              <div class="programs__card-img-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/programs/study-desktop@1x.webp, ./img/programs/study-desktop@2x.webp 2x" width="392" height="420">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/programs/study-tablet@1x.webp, ./img/programs/study-tablet@2x.webp 2x" width="324" height="420">
+                  <source type="image/webp" srcset="./img/programs/study-mobile@1x.webp, ./img/programs/study-mobile@2x.webp 2x" width="290" height="400">
+
+                  <source type="image/jpg" media="(min-width: 1400px)" srcset="./img/programs/study-desktop@1x.jpg, ./img/programs/study-desktop@2x.jpg 2x" width="392" height="420">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/programs/study-tablet@1x.jpg, ./img/programs/study-tablet@2x.jpg 2x" width="324" height="420">
+                  <img src="./img/programs/study-mobile@1x.jpg" srcset="./img/programs/study-mobile@2x.jpg 2x" width="290" height="400" alt="Студентки стажерки">
+                </picture>
+              </div>
+              <div class="programs__card-text-content">
+                <div class="programs__card-title-wrapper">
+                  <h3>Учёба</h3>
+                </div>
+                <div class="programs__card-text-wrapper">
+                  <p>Получите образование и измените
+                    своё будущее.</p>
+                </div>
+                <div class="programs__card-link-wrapper">
+                  <a class="programs__card-link" href="#">
+                    <span class="visually-hidden">Открыть программу</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- PLACE FOR CLONED SLIDES -->
+          </div>
+          <div class="programs__swiper-scrollbar swiper-scrollbar"></div>
+        </div>
+        <a class="programs__link" href="#">Все программы</a>
+      </div>
+    </section>
     <div data-test="grant">grant</div>
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
@@ -261,6 +365,12 @@
   <div data-test="footer">footer</div>
   <script type="module" src="js/main.js"></script>
 </body>
+<!-- пример использования спрайта -->
+<!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+  <svg>
+    <use href="/__spritemap#sprite-user"></use>
+  </svg> -->
+<!-- примеры требуемых атрибутов data-test="*" -->
 <!-- пример использования спрайта -->
 <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
   <svg>
