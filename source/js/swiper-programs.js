@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
-import {Navigation} from 'swiper/modules';
+import {Navigation, Scrollbar} from 'swiper/modules';
 
 const programsSwiper = new Swiper ('.programs__swiper', {
-  modules: [Navigation],
+  modules: [Navigation, Scrollbar],
 
   direction: 'horizontal',
   loop: false,
@@ -10,13 +10,18 @@ const programsSwiper = new Swiper ('.programs__swiper', {
   slidesPerView: 1,
   spaceBetween: 10,
 
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    dragSize: 326,
+  },
   navigation: {
     nextEl: '.programs__next-slide',
     prevEl: '.programs__prev-slide',
   },
+  allowTouchMove: window.innerWidth < 1440,
   breakpoints: {
     768: {
-      slidesPerView: 2,
+      slidesPerView: 'auto',
       spaceBetween: 30,
     },
     1440: {
