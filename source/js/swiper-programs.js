@@ -10,9 +10,9 @@ const programsSwiper = new Swiper ('.programs__swiper', {
 
   direction: 'horizontal',
   loop: false,
-  autoHeight: true,
+  autoHeight: 'auto',
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
 
   scrollbar: {
     el: '.swiper-scrollbar',

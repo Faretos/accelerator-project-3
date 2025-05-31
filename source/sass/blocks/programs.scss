@@ -6,7 +6,7 @@
   position: relative;
   width: 320px;
   margin: 0 auto;
-  padding: 56px 15px 50px;
+  padding: 56px 0 50px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -14,7 +14,7 @@
     gap: 40px 0;
     align-items: start;
     width: 768px;
-    padding: 50px 0 81px 45px;
+    padding: 50px 0 81px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,6 +27,7 @@
 .programs__title {
   width: 235px;
   margin: 0 0 33px;
+  padding: 0 0 0 15px;
   font-family: $primary-font;
   font-size: 20px;
   line-height: 1;
@@ -38,7 +39,7 @@
     grid-row: 1 / 2;
     width: 350px;
     margin: 0;
-    padding: 4px 0 0;
+    padding: 4px 0 0 45px;
     font-size: 34px;
     line-height: 1.47;
   }
@@ -54,39 +55,46 @@
 .programs__swiper {
   position: static;
   margin: 0 0 31px;
+  padding: 0 15px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
 .programs__slides-buttons-wrapper {
   position: absolute;
-  top: 74px;
-  right: 0;
+  min-height: 22px;
+  top: 54px;
+  right: 15px;
   width: 52px;
 
   @media (min-width: $tablet-width) {
-    top: 31px;
-    right: 32px;
+    top: 9px;
+    right: 45px;
     grid-column: 6 / 7;
     grid-row: 3 / 4;
     width: 54px;
   }
 
   @media (min-width: $desktop-width) {
-    right: -13px;
+    right: 0;
   }
 }
 
 .programs__prev-slide {
   position: absolute;
   top: 0;
-  left: auto;
-  right: 40px;
+  left: 0;
   width: 22px;
   height: 22px;
+  margin: 0;
   background-color: transparent;
   border: none;
 
@@ -94,8 +102,8 @@
     @include pseudo(10px, 10px);
 
     top: 50%;
-    right: 11px;
-    transform: translateY(-50%) rotate(180deg);
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
     mask-image: url("/__spritemap#sprite-slider-arrow-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -107,9 +115,10 @@
 .programs__next-slide {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 0;
   width: 22px;
   height: 22px;
+  margin: 0;
   background-color: transparent;
   border: none;
 
@@ -117,17 +126,13 @@
     @include pseudo(10px, 10px);
 
     top: 50%;
-    right: 11px;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     mask-image: url("/__spritemap#sprite-slider-arrow-view");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 100%;
     background-color: $primary-button-bg-color;
-  }
-
-  @media (min-width: $tablet-width) {
-    right: 8px;
   }
 }
 
@@ -144,6 +149,7 @@
 .programs__card {
   display: flex;
   flex-direction: column;
+  width: 290px;
   min-height: 400px;
 
   @media (min-width: $tablet-width) {
@@ -362,6 +368,7 @@
   display: block;
   position: relative;
   width: 205px;
+  margin: 0 0 0 15px;
   padding: 16px 67px 14px 31px;
   font-family: $primary-font;
   font-size: 12px;
@@ -400,7 +407,8 @@
   @media (min-width: $tablet-width) {
     grid-column: 4 / 7;
     grid-row: 1 / 2;
-    width: 235px;
+    width: 234px;
+    margin: 0 0 0 34px;
     padding: 20px 77px 20px 31px;
     font-size: 14px;
     letter-spacing: 0.28px;
