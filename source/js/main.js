@@ -5,3 +5,4 @@ import './select';
 import './swiper-programs';
 import './swiper-theme-news';
 import './swiper-content-news';
+import './faq-accordion';
