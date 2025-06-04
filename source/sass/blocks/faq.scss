@@ -4,7 +4,18 @@
 
 .faq__wrapper {
   width: 320px;
+  margin: 0 auto;
   padding: 51px 15px 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 51px 45px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 71px 206px 60px;
+  }
 }
 
 .faq__title {
@@ -15,6 +26,18 @@
   font-weight: 400;
   color: $accent-text-color;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 39px;
+    font-size: 34px;
+    line-height: 1.47;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 71px;
+    font-size: 50px;
+    line-height: 1;
+  }
 }
 
 .faq__accordion {
@@ -35,6 +58,18 @@
   background-color: transparent;
   border: 2px solid $accent-bg-color;
   border-radius: 14px;
+
+  @media (min-width: $tablet-width) {
+    justify-items: start;
+    width: 678px;
+    padding: 30px;
+    border-radius: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1028px;
+    padding: 40px;
+  }
 }
 
 .faq__accordion-item:last-child {
@@ -44,12 +79,16 @@
 .faq__accordion-item.active {
   gap: 19px 0;
   background-color: $accent-bg-color;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px 0;
+  }
 }
 
 .faq__accordion-item h3 {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  transition: margin 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
   margin: 0;
   padding: 0;
   font-family: $primary-font;
@@ -57,11 +96,34 @@
   line-height: 1.13;
   font-weight: 400;
   color: $accent-text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 1.18;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 894px;
+    padding: 1px 0 0;
+    font-size: 28px;
+    line-height: 1.21;
+  }
+}
+
+.faq__accordion-item h3 br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .faq__accordion-item.active h3 {
   color: $secondary-text-color;
-  margin: 0;
 }
 
 .faq__accordion-item button {
@@ -94,6 +156,10 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
     background-color: $secondary-button-bg-color;
   }
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+  }
 }
 
 .faq__accordion-item.active button {
@@ -124,9 +190,18 @@
   color: $secondary-text-color;
   text-align: left;
   opacity: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 1.63;
+  }
 }
 
 .faq__accordion-item.active p {
-  max-height: 400px;
+  max-height: 1500px;
   opacity: 1;
 }
