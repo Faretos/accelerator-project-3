@@ -898,7 +898,38 @@
         </div>
       </div>
     </section>
-    <div data-test="contacts">contacts</div>
+    <!-- CONTACTS -->
+    <section class="contacts" data-test="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title title-reset">Контакты</h2>
+        <ul class="contacts__info-list list-style-reset">
+          <li class="contacts__info-item">
+            <h3>центральный офис</h3>
+            <address>г. Новосибирск, ул. Щетинкина 68,
+              культурный центр</address>
+          </li>
+          <li class="contacts__info-item">
+            <h3>Телефон</h3>
+            <a href="tel:+796387687676">+7 963 876 876 76</a>
+          </li>
+          <li class="contacts__info-item">
+            <h3>Email</h3>
+            <a href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+          </li>
+        </ul>
+        <div class="contacts__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="./img/contacts/contacts-map-desktop@1x.webp, ./img/contacts/contacts-map-desktop@2x.webp 2x" width="1240" height="486">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/contacts/contacts-map-tablet@1x.webp, ./img/contacts/contacts-map-tablet@2x.webp 2x" width="678" height="500">
+            <source type="image/webp" srcset="./img/contacts/contacts-map-mobile@1x.webp, ./img/contacts/contacts-map-mobile@2x.webp 2x" width="290" height="240">
+
+            <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/contacts/contacts-map-desktop@1x.jpg, ./img/contacts/contacts-map-desktop@2x.jpg 2x" width="1240" height="486">
+            <source type="image/jpg" media="(min-width: 768px)" srcset="./img/contacts/contacts-map-tablet@1x.jpg, ./img/contacts/contacts-map-tablet@2x.jpg 2x" width="678" height="500">
+            <img src="./img/contacts/contacts-map-mobile@1x.jpg" srcset="./img/contacts/contacts-map-mobile@2x.jpg 2x" width="290" height="240" alt="Где мы находимся на карте">
+          </picture>
+        </div>
+      </div>
+    </section>
     <div data-test="form">form</div>
   </main>
   <div data-test="footer">footer</div>
