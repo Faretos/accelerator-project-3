@@ -24,7 +24,6 @@ function closeModalWindow() {
 }
 
 modalOpenButton.addEventListener('click', openModalWindow);
-
 modalCloseButton.addEventListener('click', closeModalWindow);
 
 modalWindow.addEventListener('click', (event) => {
