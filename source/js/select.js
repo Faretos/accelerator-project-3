@@ -1,16 +1,37 @@
-const selectWrapper = document.querySelector('.form__wrapper--city');
-const selectInput = document.getElementById('city');
+const modalSelectWrapper = document.querySelector('.form__wrapper--city');
+const modalSelectInput = document.getElementById('city');
+const ContactUsSelectWrapper = document.querySelector('.contact-us-form__input-wrapper--city');
+const ContactUsSelectInput = document.getElementById('contact-us-form-city');
 
 function initSelectToggle () {
-  selectInput.addEventListener('click', () => {
-    selectWrapper.classList.toggle('form__wrapper--city-open');
+  modalSelectInput.addEventListener('click', () => {
+    modalSelectWrapper.classList.toggle('form__wrapper--city-open');
   });
 }
 
 document.addEventListener('click', (e) => {
-  if (!selectWrapper.contains(e.target) && e.target !== selectInput) {
-    selectWrapper.classList.remove('form__wrapper--city-open');
+  if (!modalSelectWrapper.contains(e.target) && e.target !== modalSelectInput) {
+    modalSelectWrapper.classList.remove('form__wrapper--city-open');
+  }
+});
+
+function initContactUsSelectToggle () {
+  ContactUsSelectInput.addEventListener('click', () => {
+    ContactUsSelectWrapper.classList.toggle('contact-us-form__input-wrapper--city-open');
+  });
+}
+
+document.addEventListener('click', (e) => {
+  if (!ContactUsSelectWrapper.contains(e.target) && e.target !== ContactUsSelectInput) {
+    ContactUsSelectWrapper.classList.remove('contact-us-form__input-wrapper--city-open');
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (!modalSelectWrapper.contains(e.target) && e.target !== modalSelectInput) {
+    modalSelectWrapper.classList.remove('form__wrapper--city-open');
   }
 });
 
 initSelectToggle();
+initContactUsSelectToggle();

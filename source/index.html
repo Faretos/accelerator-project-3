@@ -716,6 +716,7 @@
           </div>
           <!-- PLACE FOR CLONED SLIDES -->
           <!-- PLACE FOR CLONED SLIDES -->
+          <!-- PLACE FOR CLONED SLIDES -->
           <div class="news__content-slider-buttons-wrapper">
             <button class="news__content-prev-slide swiper-button-prev" type="button">
               <span class="visually-hidden">Предыдущий слайд</span>
@@ -770,6 +771,7 @@
               доля личного участия.</p>
           </div>
           <div class="faq__accordion-item">
+            <h3>Признаётся ли учёба в рамках проекта<br> для дальнейшего обучения?</h3>
             <h3>Признаётся ли учёба в рамках проекта<br> для дальнейшего обучения?</h3>
             <h3>Признаётся ли учёба в рамках проекта<br> для дальнейшего обучения?</h3>
             <button type="button">
@@ -932,8 +934,45 @@
         </div>
       </div>
     </section>
-    <div data-test="form">form</div>
+    <!-- CONTACT US FORM -->
+    <section class="contact-us-form" data-test="form">
+      <div class="contact-us-form__wrapper">
+        <div class="contact-us-form__form-wrapper">
+          <h2 class="contact-us-form__title title-reset">Напишите нам</h2>
+          <p class="contact-us-form__text text-offset-reset">Оставьте ваши контакты, если у вас остались
+            вопросы — мы на них ответим!</p>
+          <form class="contact-us-form__form" method="post" action="https://echo.htmlacademy.ru" id="contact-us-form-form">
+            <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--name">
+              <label class="contact-us-form__label" for="contact-us-form-name">Имя</label>
+              <input class="contact-us-form__input" type="text" name="name" id="contact-us-form-name" required>
+            </div>
+            <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--phone">
+              <label class="contact-us-form__label" for="contact-us-form-phone">Телефон</label>
+              <input class="contact-us-form__input" type="tel" name="phone" id="contact-us-form-phone" required>
+            </div>
+            <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--message">
+              <label class="contact-us-form__label" for="contact-us-form-message">Ваше сообщение</label>
+              <textarea class="contact-us-form__message" name="contact-us-form-message" id="contact-us-form-message"></textarea>
+            </div>
+            <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--city">
+              <label class="contact-us-form__label" for="contact-us-form-city">Выберите город</label>
+              <select class="contact-us-form__select" name="city" id="contact-us-form-city" required>
+                <option class="contact-us-form__select-option" value="" selected hidden></option>
+                <option class="contact-us-form__select-option" value="Moscow">Москва</option>
+                <option class="contact-us-form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+              </select>
+            </div>
+            <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--personal-data">
+              <label class="contact-us-form__label contact-us-form__label--checkbox" for="contact-us-form-personal-data">Я согласен на обработку моих персональных<br> данных</label>
+              <input class="contact-us-form__input contact-us-form__input--checkbox" type="checkbox" name="personal-data" id="contact-us-form-personal-data" required>
+            </div>
+            <button class="contact-us-form__button button" type="submit">отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
+  <!-- FOOTER -->
   <div data-test="footer">footer</div>
   <script type="module" src="js/main.js"></script>
 </body>
