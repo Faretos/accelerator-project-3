@@ -1,0 +1,391 @@
+.contact-us-form {
+  padding: 40px 0;
+  background-color: $primary-bg-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 0;
+  }
+}
+
+.contact-us-form__wrapper {
+  padding: 43px 10px 40px;
+  background-image:
+    image-set(
+      url("../../img/contacts-us-form/skyscrapers-mobile@1x.webp") type("image/webp") 1x,
+      url("../../img/contacts-us-form/skyscrapers-mobile@2x.webp") type("image/webp") 2x,
+      url("../../img/contacts-us-form/skyscrapers-mobile@1x.jpg") type("image/jpg") 1x,
+      url("../../img/contacts-us-form/skyscrapers-mobile@2x.jpg") type("image/jpg") 2x,
+    );
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 652px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 16px;
+    background-image:
+      image-set(
+        url("../../img/contacts-us-form/skyscrapers-tablet@1x.webp") type("image/webp") 1x,
+        url("../../img/contacts-us-form/skyscrapers-tablet@2x.webp") type("image/webp") 2x,
+        url("../../img/contacts-us-form/skyscrapers-tablet@1x.jpg") type("image/jpg") 1x,
+        url("../../img/contacts-us-form/skyscrapers-tablet@2x.jpg") type("image/jpg") 2x,
+      );
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+    background-image:
+      image-set(
+        url("../../img/contacts-us-form/skyscrapers-desktop@1x.webp") type("image/webp") 1x,
+        url("../../img/contacts-us-form/skyscrapers-desktop@2x.webp") type("image/webp") 2x,
+        url("../../img/contacts-us-form/skyscrapers-desktop@1x.jpg") type("image/jpg") 1x,
+        url("../../img/contacts-us-form/skyscrapers-desktop@2x.jpg") type("image/jpg") 2x,
+      );
+  }
+}
+
+.contact-us-form__form-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  padding: 16px 15px 27px;
+  background-color: $accent-bg-color;
+  border-radius: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 442px;
+    margin: 0 auto 0 0;
+    padding: 41px 40px 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 490px;
+    padding: 44px 70px 40px;
+  }
+}
+
+.contact-us-form__title {
+  margin: 0 0 9px;
+  font-family: $primary-font;
+  font-size: 18px;
+  line-height: 1.22;
+  font-weight: 400;
+  color: $secondary-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 31px;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 34px;
+    font-size: 32px;
+    line-height: 1.13;
+  }
+}
+
+.contact-us-form__text {
+  margin: 0 0 21px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1.43;
+  font-weight: 400;
+  color: $secondary-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 40px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 39px;
+    line-height: 1.63;
+  }
+}
+
+.contact-us-form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 21px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px;
+  }
+}
+
+.contact-us-form__input-wrapper:last-of-type {
+  margin: 0 0 19px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 40px;
+  }
+}
+
+.contact-us-form__input-wrapper--message {
+  @media (min-width: $desktop-width) {
+    margin: 0 0 18px;
+  }
+}
+
+.contact-us-form__input-wrapper--personal-data {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.contact-us-form__label {
+  margin: 0 0 11px;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 1.17;
+  font-weight: 400;
+  color: $secondary-text-color;
+  opacity: 0.8;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 1.29;
+  }
+}
+
+.contact-us-form__input-wrapper--city label {
+  @media (min-width: $desktop-width) {
+    margin: 0 0 10px;
+  }
+}
+
+.contact-us-form__label--checkbox {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 0 0;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+
+.contact-us-form__label--checkbox br {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.contact-us-form__input {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 25px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: 1px solid $input-border-light-color;
+  border-radius: 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.contact-us-form__message {
+  position: relative;
+  width: 100%;
+  min-height: 94px;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: 1px solid $input-border-light-color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    min-height: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 90px;
+  }
+}
+
+.contact-us-form__input-wrapper--city {
+  position: relative;
+
+  &::after {
+    @include pseudo(16px, 16px);
+
+    top: 43px;
+    right: 31px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    mask-image: url("/__spritemap#sprite-arrow-down-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $secondary-text-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: 50px;
+      right: 21px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      top: 46px;
+    }
+  }
+}
+
+.contact-us-form__input-wrapper--city-open {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.contact-us-form__select {
+  position: relative;
+  appearance: none;
+  width: 260px;
+  min-height: 52px;
+  padding: 14px 25px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: 1px solid $input-border-light-color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 362px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
+}
+
+.contact-us-form__select:focus ~ .contact-us-form__input-wrapper--city::after {
+  transform: rotate(180deg);
+}
+
+.contact-us-form__select-option {
+  color: $primary-text-color;
+}
+
+.contact-us-form__input--checkbox {
+  appearance: none;
+  top: 10px;
+  padding: 0;
+  width: 21px;
+  height: 20px;
+  min-height: auto;
+  background-color: $secondary-bg-color;
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  &::after {
+    @include pseudo(0, 0);
+
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    mask-image: url("/__spritemap#sprite-check-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $primary-button-bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+
+    width: 20px;
+  }
+}
+
+.contact-us-form__input--checkbox:checked::after {
+  width: 10px;
+  height: 10px;
+}
+
+.contact-us-form__button {
+  position: relative;
+  width: 260px;
+  padding: 16px 68px 14px 30px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: 1px solid $secondary-button-bg-color;
+  border-radius: 30px;
+
+  &::before {
+    @include pseudo(34px, 34px);
+
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    background-color: $secondary-button-bg-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include pseudo(8px, 8px);
+
+    top: 50%;
+    right: 17px;
+    transform: translateY(-50%);
+    mask-image: url("/__spritemap#sprite-arrow-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $primary-button-bg-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 352px;
+    padding: 20px 80px 20px 30px;
+    font-size: 14px;
+
+    &::before {
+      width: 46px;
+      height: 46px;
+    }
+
+    &::after {
+      right: 23px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
+}
