@@ -225,6 +225,10 @@
   object-fit: cover;
   box-sizing: border-box;
   border-radius: 12px;
+
+  @media (min-width: $desktop-width) {
+    width: 286px;
+  }
 }
 
 .news__card:nth-child(3n + 1) img {
