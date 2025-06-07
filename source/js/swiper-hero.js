@@ -1,14 +1,12 @@
 import Swiper from 'swiper';
 import {Pagination} from 'swiper/modules';
 
-const bullets = document.querySelectorAll('.hero__pagination-bullet');
-
 const heroSwiper = new Swiper ('.hero__wrapper', {
   modules: [Pagination],
 
   direction: 'horizontal',
   loop: true,
-  autoHeight: 'auto',
+  autoHeight: 'true',
   slidesPerView: 1,
   spaceBetween: 0,
 
@@ -17,9 +15,14 @@ const heroSwiper = new Swiper ('.hero__wrapper', {
     type: 'bullets',
     clickable: true,
     renderBullet: function (index, className) {
-      return `<span class="${ className } hero__pagination-bullet" tabindex="0"></span>`;
+      return `<button class="${ className } hero__pagination-bullet" tabindex="0"><span class="visually-hidden">${ index + 1 } слайд</span></button>`;
     }
   },
+  on: { slideChangeTransitionStart: function () {
+    movePaginationToActiveSlide();
+  }, init: function () {
+    movePaginationToActiveSlide();
+  }},
   allowTouchMove: window.innerWidth < 1440,
   breakpoints: {
     768: {
@@ -37,18 +40,20 @@ const heroSwiper = new Swiper ('.hero__wrapper', {
   },
 });
 
-if (bullets.length > 0) {
-  bullets[0].classList.add('hero__pagination-bullet--active');
+function movePaginationToActiveSlide() {
+  const slides = document.querySelectorAll('.hero__card');
+  const paginationElement = document.querySelector('.swiper-pagination');
+
+  slides.forEach((slide) => {
+    if (slide.classList.contains('swiper-slide-active')) {
+      const content = slide.querySelector('.hero__card-content');
+      content.appendChild(paginationElement);
+    }
+  });
 }
 
 heroSwiper.on('slideChange', () => {
-  const activeIndex = heroSwiper.realIndex;
-
-  bullets.forEach((bullet, index) => {
-    if (index === activeIndex) {
-      bullet.classList.add('hero__pagination-bullet--active');
-    } else {
-      bullet.classList.remove('hero__pagination-bullet--active');
-    }
-  });
+  movePaginationToActiveSlide();
 });
+
+movePaginationToActiveSlide();

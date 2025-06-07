@@ -208,7 +208,7 @@
   position: relative;
   width: 100%;
   min-height: 94px;
-  padding: 0;
+  padding: 14px 25px;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 1;
@@ -283,6 +283,7 @@
 
   @media (min-width: $tablet-width) {
     width: 362px;
+    padding: 17px 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -295,6 +296,7 @@
 }
 
 .contact-us-form__select-option {
+  padding: 17px 20px;
   color: $primary-text-color;
 }
 

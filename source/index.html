@@ -38,59 +38,60 @@
         <nav class="hero__navigation navigation">
           <ul class="navigation__list list-style-reset">
             <li class="navitagion__item">
-              <a class="navigation__link" href="#">О проекте</a>
+              <a class="navigation__link" href="#about">О проекте</a>
             </li>
             <li class="navitagion__item navitagion__item--item-with-list">
               <button class="navigation__button button" type="button">Программы</button>
               <ul class="navigation__item-list list-style-reset" id="list">
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Стажировки</a>
+                  <a class="navigation__link" href="#programs">Стажировки</a>
                 </li>
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Волонтёрство</a>
+                  <a class="navigation__link" href="#programs">Волонтёрство</a>
                 </li>
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Учеба</a>
+                  <a class="navigation__link" href="#programs">Учеба</a>
                 </li>
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Религия</a>
+                  <a class="navigation__link" href="#programs">Религия</a>
                 </li>
               </ul>
             </li>
             <li class="navitagion__item">
-              <a class="navigation__link" href="#">Как поехать</a>
+              <a class="navigation__link" href="#grant">Как поехать</a>
             </li>
             <li class="navitagion__item">
-              <a class="navigation__link" href="#">Отзывы</a>
+              <a class="navigation__link" href="#reviews">Отзывы</a>
             </li>
             <li class="navitagion__item navitagion__item--item-with-list">
               <button class="navigation__button button" type="button">Новости</button>
               <ul class="navigation__item-list list-style-reset">
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Общее</a>
+                  <a class="navigation__link" href="#news">Общее</a>
                 </li>
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Волонтёрство</a>
+                  <a class="navigation__link" href="#news">Волонтёрство</a>
                 </li>
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Стажировки</a>
+                  <a class="navigation__link" href="#news">Стажировки</a>
                 </li>
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Карьера</a>
+                  <a class="navigation__link" href="#news">Карьера</a>
                 </li>
                 <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Путешествия</a>
+                  <a class="navigation__link" href="#news">Путешествия</a>
                 </li>
               </ul>
             </li>
             <li class="navitagion__item">
-              <a class="navigation__link" href="#">Контакты</a>
+              <a class="navigation__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
       </header>
       <div class="hero__content-wrapper">
         <div class="hero__wrapper swiper">
+          <div class="hero__pagination swiper-pagination"></div>
           <div class="hero__swiper-wrapper swiper-wrapper">
             <!-- SLIDE 1 -->
             <div class="hero__card swiper-slide hero__card--experience-abroad" tabindex="0">
@@ -162,12 +163,12 @@
               </div>
             </div>
           </div>
-          <div class="hero__pagination swiper-pagination"></div>
+
         </div>
       </div>
     </section>
     <!-- ABOUT -->
-    <section class="about" data-test="about">
+    <section class="about" data-test="about" id="about">
       <div class="about__wrapper">
         <div class="about__text-content-wrapper">
           <div class="about__title-wrapper">
@@ -226,11 +227,11 @@
           <form class="modal-window__form form" method="post" action="https://echo.htmlacademy.ru" id="about-form">
             <div class="form__wrapper form__wrapper--name">
               <label class="form__label" for="name">Имя</label>
-              <input class="form__input" type="text" name="name" id="name" required>
+              <input class="form__input" type="text" name="name" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Например: Иван Иванов" id="name" required>
             </div>
             <div class="form__wrapper form__wrapper--phone">
               <label class="form__label" for="phone">Телефон</label>
-              <input class="form__input" type="tel" name="phone" id="phone" required>
+              <input class="form__input" type="tel" name="phone" pattern="\+7 $\d{3}$ \d{3}-\d{4}" title="Формат: +7 (XXX) XXX-XXXX" id="phone" required>
             </div>
             <div class="form__wrapper form__wrapper--city">
               <label class="form__label" for="city">Выберите город</label>
@@ -238,6 +239,12 @@
                 <option class="form__select-option" value="" selected hidden></option>
                 <option class="form__select-option" value="Moscow">Москва</option>
                 <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+                <option class="form__select-option" value="Novosibirsk">Новосибирск</option>
+                <option class="form__select-option" value="Kazan">Казань</option>
+                <option class="form__select-option" value="Moscow">Москва</option>
+                <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+                <option class="form__select-option" value="Novosibirsk">Новосибирск</option>
+                <option class="form__select-option" value="Kazan">Казань</option>
               </select>
             </div>
             <div class="form__wrapper form__wrapper--personal-data">
@@ -250,7 +257,7 @@
       </div>
     </section>
     <!-- PROGRAMS -->
-    <section class="programs" data-test="programs">
+    <section class="programs" data-test="programs" id="programs">
       <div class="programs__wrapper">
         <h2 class="programs__title title-reset">Программы</h2>
         <div class="programs__swiper swiper">
@@ -356,7 +363,7 @@
       </div>
     </section>
     <!-- GRANT -->
-    <section class="grant" data-test="grant">
+    <section class="grant" data-test="grant" id="grant">
       <div class="grant__wrapper">
         <div class="grant__how-to-go-wrapper">
           <h2 class="grant__title title-reset">Как поехать</h2>
@@ -406,7 +413,7 @@
       </div>
     </section>
     <!-- NEWS -->
-    <section class="news" data-test="news">
+    <section class="news" data-test="news" id="news">
       <div class="news__wrapper">
         <h2 class="news__title title-reset">Новости и материалы</h2>
         <!-- THEME SWIPER -->
@@ -715,9 +722,6 @@
             </div>
           </div>
           <!-- PLACE FOR CLONED SLIDES -->
-          <!-- PLACE FOR CLONED SLIDES -->
-          <!-- PLACE FOR CLONED SLIDES -->
-          <!-- PLACE FOR CLONED SLIDES -->
           <div class="news__content-slider-buttons-wrapper">
             <button class="news__content-prev-slide swiper-button-prev" type="button">
               <span class="visually-hidden">Предыдущий слайд</span>
@@ -736,7 +740,7 @@
       </div>
     </section>
     <!-- FAQ -->
-    <section class="faq" data-test="FAQ">
+    <section class="faq" data-test="FAQ" if="faq">
       <div class="faq__wrapper">
         <h2 class="faq__title title-reset">Вопросы и ответы</h2>
         <div class="faq__accordion">
@@ -795,7 +799,7 @@
       </div>
     </section>
     <!-- REVIEWS -->
-    <section class="reviews" data-test="reviews">
+    <section class="reviews" data-test="reviews" id="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title title-reset">Отзывы</h2>
         <div class="reviews__swiper swiper">
@@ -905,7 +909,7 @@
       </div>
     </section>
     <!-- CONTACTS -->
-    <section class="contacts" data-test="contacts">
+    <section class="contacts" data-test="contacts" id="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title title-reset">Контакты</h2>
         <ul class="contacts__info-list list-style-reset">
@@ -937,7 +941,7 @@
       </div>
     </section>
     <!-- CONTACT US FORM -->
-    <section class="contact-us-form" data-test="form">
+    <section class="contact-us-form" data-test="form" id="contact-us-form">
       <div class="contact-us-form__wrapper">
         <div class="contact-us-form__form-wrapper">
           <h2 class="contact-us-form__title title-reset">Напишите нам</h2>
@@ -946,11 +950,11 @@
           <form class="contact-us-form__form" method="post" action="https://echo.htmlacademy.ru" id="contact-us-form-form">
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--name">
               <label class="contact-us-form__label" for="contact-us-form-name">Имя</label>
-              <input class="contact-us-form__input" type="text" name="name" id="contact-us-form-name" required>
+              <input class="contact-us-form__input" type="text" name="name" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Например: Иван Иванов" id="contact-us-form-name" required>
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--phone">
               <label class="contact-us-form__label" for="contact-us-form-phone">Телефон</label>
-              <input class="contact-us-form__input" type="tel" name="phone" id="contact-us-form-phone" required>
+              <input class="contact-us-form__input" type="tel" name="phone" pattern="\+7 $\d{3}$ \d{3}-\d{4}" title="Формат: +7 (XXX) XXX-XXXX" id="contact-us-form-phone" required>
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--message">
               <label class="contact-us-form__label" for="contact-us-form-message">Ваше сообщение</label>
@@ -962,6 +966,12 @@
                 <option class="contact-us-form__select-option" value="" selected hidden></option>
                 <option class="contact-us-form__select-option" value="Moscow">Москва</option>
                 <option class="contact-us-form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+                <option class="contact-us-form__select-option" value="Novosibirsk">Новосибирск</option>
+                <option class="contact-us-form__select-option" value="Kazan">Казань</option>
+                <option class="contact-us-form__select-option" value="Moscow">Москва</option>
+                <option class="contact-us-form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+                <option class="contact-us-form__select-option" value="Novosibirsk">Новосибирск</option>
+                <option class="contact-us-form__select-option" value="Kazan">Казань</option>
               </select>
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--personal-data">
@@ -975,7 +985,7 @@
     </section>
   </main>
   <!-- FOOTER -->
-  <footer class="footer" data-test="footer">
+  <footer class="footer" data-test="footer" id="footer">
     <div class="footer__wrapper">
       <h2 class="footer__title visually-hidden">Подвал сайта</h2>
       <div class="footer__image-wrapper">
@@ -987,22 +997,22 @@
       </div>
       <ul class="footer__list list-style-reset">
         <li class="footer__item">
-          <a class="footer__link" href="#">О проекте</a>
+          <a class="footer__link" href="#about">О проекте</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Программы</a>
+          <a class="footer__link" href="#programs">Программы</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Как поехать</a>
+          <a class="footer__link" href="#grant">Как поехать</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Отзывы</a>
+          <a class="footer__link" href="#reviews">Отзывы</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Новости</a>
+          <a class="footer__link" href="#news">Новости</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Контакты</a>
+          <a class="footer__link" href="#contacts">Контакты</a>
         </li>
       </ul>
       <div class="footer__policy-and-copyright-wrapper">
@@ -1030,11 +1040,5 @@
   </footer>
   <script type="module" src="js/main.js"></script>
 </body>
-<!-- пример использования спрайта -->
-<!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-  <svg>
-    <use href="/__spritemap#sprite-user"></use>
-  </svg> -->
-<!-- примеры требуемых атрибутов data-test="*" -->
 
 </html>

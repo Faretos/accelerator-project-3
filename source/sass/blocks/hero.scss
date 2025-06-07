@@ -150,6 +150,7 @@
 }
 
 .hero__content-wrapper {
+  position: relative;
   min-height: 568px;
 
   @media (min-width: $tablet-width) {
@@ -442,11 +443,11 @@
 }
 
 .hero__wrapper .hero__pagination {
-  top: 201px;
+  top: -28px;
   bottom: auto;
-  left: 15px;
+  left: 0;
   width: 80px;
-  padding: 4px 8px 6px;
+  padding: 2px 8px 8px;
   background-color: $secondary-bg-color;
   border-radius: 12px 12px 0 0;
 
@@ -463,10 +464,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    top: 647px;
-    left: 45px;
+    top: -40px;
     width: 100px;
-    padding: 12px 0 10px;
+    padding: 10px 0 12px;
     border-radius: 20px 20px 0 0;
 
     &::after {
@@ -475,11 +475,6 @@
       width: 20px;
       height: 20px;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 393px;
-    left: 100px;
   }
 }
 
