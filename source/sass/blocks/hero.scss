@@ -99,13 +99,13 @@
   width: 290px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 285px 266px;
+    grid-template-columns: 285px 373px;
     width: 659px;
     margin: auto 64px 60px 45px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 446px 276px;
+    grid-template-columns: 446px 521px;
     width: 968px;
     margin: auto 372px 60px 100px;
   }
