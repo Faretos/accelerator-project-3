@@ -20,75 +20,76 @@
 </head>
 
 <body class="page__body">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__image-wrapper">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="/__spritemap#sprite-logo-view" width="52" height="52">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="/__spritemap#sprite-logo-view" width="52" height="52">
+        <img src="/__spritemap#sprite-logo-view" width="52" height="52" alt="Логотип Internship">
+      </picture>
+    </div>
+    <button class="header__menu-button button" type="button">Меню</button>
+    <!-- NAV MENU -->
+    <nav class="header__navigation navigation">
+      <ul class="navigation__list list-style-reset">
+        <li class="navitagion__item">
+          <a class="navigation__link" href="#about">О проекте</a>
+        </li>
+        <li class="navitagion__item navitagion__item--item-with-list">
+          <button class="navigation__button button" type="button">Программы</button>
+          <ul class="navigation__item-list list-style-reset" id="list">
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#programs">Стажировки</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#programs">Волонтёрство</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#programs">Учеба</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#programs">Религия</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navitagion__item">
+          <a class="navigation__link" href="#grant">Как поехать</a>
+        </li>
+        <li class="navitagion__item">
+          <a class="navigation__link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="navitagion__item navitagion__item--item-with-list">
+          <button class="navigation__button button" type="button">Новости</button>
+          <ul class="navigation__item-list list-style-reset">
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Общее</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Волонтёрство</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Стажировки</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Карьера</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Путешествия</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navitagion__item">
+          <a class="navigation__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <!-- MAIN -->
   <main class="main-container">
     <!-- HERO -->
     <section class="hero" data-test="hero">
       <h1 class="visually-hidden">Преимущества Internship</h1>
-      <header class="hero__header">
-        <div class="hero__image-wrapper">
-          <picture>
-            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="/__spritemap#sprite-logo-view" width="52" height="52">
-            <source type="image/svg+xml" media="(min-width: 768px)" srcset="/__spritemap#sprite-logo-view" width="52" height="52">
-            <img src="/__spritemap#sprite-logo-view" width="52" height="52" alt="Логотип Internship">
-          </picture>
-        </div>
-        <button class="hero__menu-button button" type="button">Меню</button>
-        <!-- NAV MENU -->
-        <nav class="hero__navigation navigation">
-          <ul class="navigation__list list-style-reset">
-            <li class="navitagion__item">
-              <a class="navigation__link" href="#about">О проекте</a>
-            </li>
-            <li class="navitagion__item navitagion__item--item-with-list">
-              <button class="navigation__button button" type="button">Программы</button>
-              <ul class="navigation__item-list list-style-reset" id="list">
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#programs">Стажировки</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#programs">Волонтёрство</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#programs">Учеба</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#programs">Религия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="navitagion__item">
-              <a class="navigation__link" href="#grant">Как поехать</a>
-            </li>
-            <li class="navitagion__item">
-              <a class="navigation__link" href="#reviews">Отзывы</a>
-            </li>
-            <li class="navitagion__item navitagion__item--item-with-list">
-              <button class="navigation__button button" type="button">Новости</button>
-              <ul class="navigation__item-list list-style-reset">
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#news">Общее</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#news">Волонтёрство</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#news">Стажировки</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#news">Карьера</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#news">Путешествия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="navitagion__item">
-              <a class="navigation__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
       <div class="hero__content-wrapper">
         <div class="hero__wrapper swiper">
           <div class="hero__swiper-wrapper swiper-wrapper">
@@ -105,13 +106,15 @@
                   <img src="./img/hero/girl-student-mobile@1x.jpg" srcset="./img/hero/girl-student-mobile@2x.jpg 2x" width="320" height="568" alt="Студентка за границей">
                 </picture>
               </div>
-              <div class="hero__card-content">
-                <h2 class="hero__card-title title-reset">Глобальный профессиональный опыт обучения за рубежом</h2>
-                <div class="hero__card-text-wrapper">
-                  <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
-                </div>
-                <div class="hero__card-button-wrapper">
-                  <button class="hero__card-button" type="button">Подробнее</button>
+              <div class="hero__card-content-wrapper">
+                <div class="hero__card-content">
+                  <h2 class="hero__card-title title-reset">Глобальный профессиональный опыт обучения за рубежом</h2>
+                  <div class="hero__card-text-wrapper">
+                    <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                  </div>
+                  <div class="hero__card-button-wrapper">
+                    <button class="hero__card-button" type="button">Подробнее</button>
+                  </div>
                 </div>
               </div>
             </div>

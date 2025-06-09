@@ -1,26 +1,26 @@
 import { pageState } from './page-state';
 
 const body = document.body;
-const burgerMenuButton = document.querySelector('.hero__menu-button');
-const navigation = document.querySelector('.hero__navigation');
+const burgerMenuButton = document.querySelector('.header__menu-button');
+const navigation = document.querySelector('.header__navigation');
 const navList = navigation.querySelector('.navigation__list');
 const navLinks = navigation.querySelectorAll('.navigation__link');
 const navButtons = navigation.querySelectorAll('.navigation__button');
 const navItems = navigation.querySelectorAll('.navitagion__item');
 
 function burgerMenuToggle() {
-  navigation.classList.toggle('hero__navigation--open');
-  burgerMenuButton.classList.toggle('hero__menu-button--open');
+  navigation.classList.toggle('header__navigation--open');
+  burgerMenuButton.classList.toggle('header__menu-button--open');
 
   if (pageState.isMenuOpen) {
     pageState.closeMenu();
-    navigation.classList.remove('hero__navigation--open');
+    navigation.classList.remove('header__navigation--open');
     navList.style.display = 'none';
     removeNavItemsClass();
     removeNavLinksListeners();
   } else {
     pageState.openMenu();
-    navigation.classList.add('hero__navigation--open');
+    navigation.classList.add('header__navigation--open');
     navList.style.display = 'block';
     addNavLinksListeners();
   }
@@ -28,8 +28,8 @@ function burgerMenuToggle() {
 
 function closeBurgerMenu() {
   pageState.closeMenu();
-  burgerMenuButton.classList.remove('hero__menu-button--open');
-  navigation.classList.remove('hero__navigation--open');
+  burgerMenuButton.classList.remove('header__menu-button--open');
+  navigation.classList.remove('header__navigation--open');
   removeNavItemsClass();
   removeNavLinksListeners();
 }
@@ -69,7 +69,7 @@ function initBurgerMenu() {
 }
 
 body.addEventListener('click', (event) => {
-  if(navigation.classList.contains('hero__navigation--open') && !navigation.contains(event.target) && !burgerMenuButton.contains(event.target)) {
+  if(navigation.classList.contains('header__navigation--open') && !navigation.contains(event.target) && !burgerMenuButton.contains(event.target)) {
     closeBurgerMenu();
   }
 });
