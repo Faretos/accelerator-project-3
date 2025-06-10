@@ -221,46 +221,6 @@
           </li>
         </ul>
       </div>
-      <!-- MODAL WINDOW -->
-      <div class="about__modal-window modal-window">
-        <div class="modal-window__wrapper">
-          <button class="modal-window__button button" type="button">
-            <span class="visually-hidden">Закрыть окно</span>
-          </button>
-          <h3 class="modal-window__title title-reset">Напишите нам</h3>
-          <p class="modal-window__text text-offset-reset">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-          <!-- FORM -->
-          <form class="modal-window__form form" method="post" action="https://echo.htmlacademy.ru" id="about-form">
-            <div class="form__wrapper form__wrapper--name">
-              <label class="form__label" for="name">Имя</label>
-              <input class="form__input" type="text" name="name" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Например: Иван Иванов" id="name" required>
-            </div>
-            <div class="form__wrapper form__wrapper--phone">
-              <label class="form__label" for="phone">Телефон</label>
-              <input class="form__input" type="tel" name="phone" pattern="\+7 $\d{3}$ \d{3}-\d{4}" title="Формат: +7 (XXX) XXX-XXXX" id="phone" required>
-            </div>
-            <div class="form__wrapper form__wrapper--city">
-              <label class="form__label" for="city">Выберите город</label>
-              <select class="form__select" name="city" id="city" required>
-                <option class="form__select-option" value="" selected hidden></option>
-                <option class="form__select-option" value="Moscow">Москва</option>
-                <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
-                <option class="form__select-option" value="Novosibirsk">Новосибирск</option>
-                <option class="form__select-option" value="Kazan">Казань</option>
-                <option class="form__select-option" value="Moscow">Москва</option>
-                <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
-                <option class="form__select-option" value="Novosibirsk">Новосибирск</option>
-                <option class="form__select-option" value="Kazan">Казань</option>
-              </select>
-            </div>
-            <div class="form__wrapper form__wrapper--personal-data">
-              <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих персональных данных</label>
-              <input class="form__input form__input--checkbox" type="checkbox" name="personal-data" id="personal-data" required>
-            </div>
-            <button class="form__button button" type="submit">отправить</button>
-          </form>
-        </div>
-      </div>
     </section>
     <!-- PROGRAMS -->
     <section class="programs" data-test="programs" id="programs">
@@ -1515,7 +1475,7 @@
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--phone">
               <label class="contact-us-form__label" for="contact-us-form-phone">Телефон</label>
-              <input class="contact-us-form__input" type="tel" name="phone" pattern="\+7 $\d{3}$ \d{3}-\d{4}" title="Формат: +7 (XXX) XXX-XXXX" id="contact-us-form-phone" required>
+              <input class="contact-us-form__input" type="tel" name="phone" pattern="\+7 \d{3} \d{3}-\d{4}$" title="Формат: +7 (XXX) XXX-XXXX" id="contact-us-form-phone" minlength="12" maxlength="12" required>
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--message">
               <label class="contact-us-form__label" for="contact-us-form-message">Ваше сообщение</label>
@@ -1523,7 +1483,22 @@
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--city">
               <label class="contact-us-form__label" for="contact-us-form-city">Выберите город</label>
-              <select class="contact-us-form__select" name="city" id="contact-us-form-city" required>
+
+              <div class="contact-us-form__custom-select">
+                <div class="contact-us-form__custom-select-selected" data-value="hidden" tabindex="0"></div>
+                <div class="contact-us-form__custom-select-items contact-us-form__custom-select-select-hidden">
+                  <div class="contact-us-form__custom-selec-item" data-value="Moscow" tabindex="0">Москва</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Saint-Petersburg" tabindex="0">Санкт-Петербург</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Novosibirsk" tabindex="0">Новосибирск</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Kazan" tabindex="0">Казань</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Moscow" tabindex="0">Москва</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Saint-Petersburg" tabindex="0">Санкт-Петербург</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Novosibirsk" tabindex="0">Новосибирск</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Kazan" tabindex="0">Казань</div>
+                </div>
+              </div>
+
+              <select class="contact-us-form__select" name="city" id="contact-us-form-city" style="display: none" required>
                 <option class="contact-us-form__select-option" value="" selected hidden></option>
                 <option class="contact-us-form__select-option" value="Moscow">Москва</option>
                 <option class="contact-us-form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
@@ -1534,11 +1509,13 @@
                 <option class="contact-us-form__select-option" value="Novosibirsk">Новосибирск</option>
                 <option class="contact-us-form__select-option" value="Kazan">Казань</option>
               </select>
+
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--personal-data">
               <label class="contact-us-form__label contact-us-form__label--checkbox" for="contact-us-form-personal-data">Я согласен на обработку моих персональных<br> данных</label>
               <input class="contact-us-form__input contact-us-form__input--checkbox" type="checkbox" name="personal-data" id="contact-us-form-personal-data" required>
             </div>
+
             <button class="contact-us-form__button button" type="submit">отправить</button>
           </form>
         </div>
@@ -1599,6 +1576,47 @@
       </ul>
     </div>
   </footer>
+  <!-- MODAL WINDOW -->
+  <div class="about__modal-window modal-window">
+    <div class="modal-window__wrapper">
+      <button class="modal-window__button button" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+      <h3 class="modal-window__title title-reset">Напишите нам</h3>
+      <p class="modal-window__text text-offset-reset">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+      <!-- FORM -->
+      <form class="modal-window__form form" method="post" action="https://echo.htmlacademy.ru" id="about-form">
+        <div class="form__wrapper form__wrapper--name">
+          <label class="form__label" for="name">Имя</label>
+          <input class="form__input" type="text" name="name" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Например: Иван Иванов" id="name" required>
+        </div>
+        <div class="form__wrapper form__wrapper--phone">
+          <label class="form__label" for="phone">Телефон</label>
+          <input class="form__input" type="tel" name="phone" pattern="\+7 \d{3} \d{3}-\d{4}$" title="Формат: +7 (XXX) XXX-XXXX" id="phone" minlength="12" maxlength="12" required>
+        </div>
+        <div class="form__wrapper form__wrapper--city">
+          <label class="form__label" for="city">Выберите город</label>
+          <select class="form__select" name="city" id="city" required>
+            <option class="form__select-option" value="" selected hidden></option>
+            <option class="form__select-option" value="Moscow">Москва</option>
+            <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+            <option class="form__select-option" value="Novosibirsk">Новосибирск</option>
+            <option class="form__select-option" value="Kazan">Казань</option>
+            <option class="form__select-option" value="Moscow">Москва</option>
+            <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+            <option class="form__select-option" value="Novosibirsk">Новосибирск</option>
+            <option class="form__select-option" value="Kazan">Казань</option>
+          </select>
+        </div>
+        <div class="form__wrapper form__wrapper--personal-data">
+          <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих персональных данных</label>
+          <input class="form__input form__input--checkbox" type="checkbox" name="personal-data" id="personal-data" required>
+        </div>
+        <button class="form__button button" type="submit">отправить</button>
+      </form>
+    </div>
+  </div>
+
   <script type="module" src="js/main.js"></script>
 </body>
 

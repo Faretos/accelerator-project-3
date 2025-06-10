@@ -118,3 +118,13 @@
     line-height: 1.63;
   }
 }
+
+.modal-window__button:hover,
+.modal-window__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.modal-window__button:active {
+  opacity: 0.3;
+}

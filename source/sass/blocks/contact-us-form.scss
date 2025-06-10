@@ -300,6 +300,75 @@
   color: $primary-text-color;
 }
 
+.contact-us-form__custom-select {
+  position: relative;
+}
+
+.contact-us-form__custom-select-selected {
+  width: 260px;
+  min-height: 52px;
+  margin: 0 0 4px;
+  padding: 17px 25px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: 1px solid $input-border-light-color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 362px;
+    padding: 17px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
+}
+
+.contact-us-form__custom-select-items {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  overflow: hidden;
+  width: 260px;
+  padding: 1px;
+  background-color: $secondary-bg-color;
+  border-radius: 8px;
+  z-index: 10;
+
+  @media (min-width: $tablet-width) {
+    width: 362px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
+}
+
+.contact-us-form__custom-select-items div {
+  padding: 17px 20px;
+  cursor: pointer;
+}
+
+.contact-us-form__custom-select-items div:hover {
+  color: $accent-text-color;
+}
+
+.contact-us-form__custom-select-items div:focus,
+.contact-us-form__custom-select-items div:active {
+  outline: none;
+  color: $secondary-text-color;
+  background-color: $accent-bg-color;
+}
+
+.contact-us-form__custom-select-select-hidden {
+  display: none;
+}
+
 .contact-us-form__input--checkbox {
   appearance: none;
   top: 10px;

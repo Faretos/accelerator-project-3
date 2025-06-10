@@ -1,37 +1,45 @@
-const modalSelectWrapper = document.querySelector('.form__wrapper--city');
-const modalSelectInput = document.getElementById('city');
-const ContactUsSelectWrapper = document.querySelector('.contact-us-form__input-wrapper--city');
-const ContactUsSelectInput = document.getElementById('contact-us-form-city');
+const customSelect = document.querySelector('.contact-us-form__custom-select');
+const selected = customSelect.querySelector('.contact-us-form__custom-select-selected');
+const items = customSelect.querySelector('.contact-us-form__custom-select-items');
+const originalSelect = document.getElementById('contact-us-form-city');
 
-function initSelectToggle () {
-  modalSelectInput.addEventListener('click', () => {
-    modalSelectWrapper.classList.toggle('form__wrapper--city-open');
+selected.addEventListener('click', () => {
+  items.classList.toggle('contact-us-form__custom-select-select-hidden');
+});
+
+selected.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    items.classList.toggle('contact-us-form__custom-select-select-hidden');
+  }
+});
+
+items.querySelectorAll('div').forEach((item) => {
+  item.addEventListener('click', function() {
+    selected.textContent = this.textContent;
+    selected.setAttribute('data-value', this.getAttribute('data-value'));
+    originalSelect.value = this.getAttribute('data-value');
+    items.classList.add('contact-us-form__custom-select-select-hidden');
   });
-}
 
-document.addEventListener('click', (e) => {
-  if (!modalSelectWrapper.contains(e.target) && e.target !== modalSelectInput) {
-    modalSelectWrapper.classList.remove('form__wrapper--city-open');
-  }
-});
-
-function initContactUsSelectToggle () {
-  ContactUsSelectInput.addEventListener('click', () => {
-    ContactUsSelectWrapper.classList.toggle('contact-us-form__input-wrapper--city-open');
+  item.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      selected.textContent = this.textContent;
+      selected.setAttribute('data-value', this.getAttribute('data-value'));
+      originalSelect.value = this.getAttribute('data-value');
+      items.classList.add('contact-us-form__custom-select-select-hidden');
+    }
   });
-}
+});
 
-document.addEventListener('click', (e) => {
-  if (!ContactUsSelectWrapper.contains(e.target) && e.target !== ContactUsSelectInput) {
-    ContactUsSelectWrapper.classList.remove('contact-us-form__input-wrapper--city-open');
+
+document.addEventListener('click', (event) => {
+  if (!customSelect.contains(event.target)) {
+    items.classList.add('contact-us-form__custom-select-select-hidden');
   }
 });
 
-document.addEventListener('click', (e) => {
-  if (!modalSelectWrapper.contains(e.target) && e.target !== modalSelectInput) {
-    modalSelectWrapper.classList.remove('form__wrapper--city-open');
+customSelect.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    items.classList.add('contact-us-form__custom-select-select-hidden');
   }
 });
-
-initSelectToggle();
-initContactUsSelectToggle();

@@ -138,7 +138,7 @@
   position: relative;
   width: 100%;
   min-height: 44px;
-  padding: 5px;
+  padding: 17px 20px;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 1;
@@ -184,6 +184,11 @@
 .form__input--checkbox:checked::after {
   width: 10px;
   height: 10px;
+}
+
+.form__input--error {
+  background-color: $input-error-background-color;
+  border-color: $input-error-border-color;
 }
 
 
@@ -236,4 +241,28 @@
       height: 10px;
     }
   }
+}
+
+.form__input:hover,
+.form__select:hover,
+.form__input:focus,
+.form__select:focus {
+  outline: none;
+  border-color: $primary-text-color;
+}
+
+.form__input:disabled,
+.form__select:disabled,
+.form__input.disabled,
+.form__select.disabled {
+  pointer-events: none;
+  background-color: $input-disabled-background-color;
+  border-color: $input-disabled-border-color;
+}
+
+.form__label:has(+ .form__input:disabled),
+.form__label:has(+ .form__select:disabled),
+.form__label:has(+ .form__select.disabled),
+.form__label:has(+ .form__input.disabled) {
+  color: $label-disabled-color;
 }
