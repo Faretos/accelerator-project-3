@@ -1,10 +1,10 @@
 import './hero-burger-menu';
 import './swiper-hero';
 import './modal';
-import './select';
+import './contact-us-select';
 import './swiper-programs';
 import './swiper-theme-news';
 import './swiper-content-news';
 import './faq-accordion';
 import './swiper-reviews';
-import './forms';
+import './modal-form';

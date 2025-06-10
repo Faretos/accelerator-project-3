@@ -3,12 +3,16 @@ const selected = customSelect.querySelector('.contact-us-form__custom-select-sel
 const items = customSelect.querySelector('.contact-us-form__custom-select-items');
 const originalSelect = document.getElementById('contact-us-form-city');
 
+originalSelect.style.display = 'none';
+
 selected.addEventListener('click', () => {
+  customSelect.classList.toggle('contact-us-form__custom-select--open');
   items.classList.toggle('contact-us-form__custom-select-select-hidden');
 });
 
 selected.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
+    customSelect.classList.toggle('contact-us-form__custom-select--open');
     items.classList.toggle('contact-us-form__custom-select-select-hidden');
   }
 });

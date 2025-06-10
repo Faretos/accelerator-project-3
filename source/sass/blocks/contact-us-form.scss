@@ -230,44 +230,10 @@
 
 .contact-us-form__input-wrapper--city {
   position: relative;
-
-  &::after {
-    @include pseudo(16px, 16px);
-
-    top: 43px;
-    right: 31px;
-    z-index: 2;
-    transition: transform 0.3s ease;
-    mask-image: url("/__spritemap#sprite-arrow-down-icon-view");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 100%;
-    background-color: $secondary-text-color;
-  }
-
-  @media (min-width: $tablet-width) {
-    &::after {
-      top: 50px;
-      right: 21px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::after {
-      top: 46px;
-    }
-  }
-}
-
-.contact-us-form__input-wrapper--city-open {
-  &::after {
-    transform: rotate(180deg);
-  }
 }
 
 .contact-us-form__select {
   position: relative;
-  appearance: none;
   width: 260px;
   min-height: 52px;
   padding: 14px 25px;
@@ -291,10 +257,6 @@
   }
 }
 
-.contact-us-form__select:focus ~ .contact-us-form__input-wrapper--city::after {
-  transform: rotate(180deg);
-}
-
 .contact-us-form__select-option {
   padding: 17px 20px;
   color: $primary-text-color;
@@ -302,12 +264,38 @@
 
 .contact-us-form__custom-select {
   position: relative;
+
+  &::after {
+    @include pseudo(16px, 16px);
+
+    top: 18px;
+    right: 31px;
+    z-index: 11;
+    transition: transform 0.3s ease;
+    mask-image: url("/__spritemap#sprite-arrow-down-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $secondary-text-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      right: 21px;
+    }
+  }
+}
+
+.contact-us-form__custom-select--open {
+  &::after {
+    transform: rotate(180deg);
+  }
 }
 
 .contact-us-form__custom-select-selected {
   width: 260px;
   min-height: 52px;
-  margin: 0 0 4px;
+  margin: 0;
   padding: 17px 25px;
   font-family: $primary-font;
   font-size: 14px;
@@ -352,17 +340,6 @@
 .contact-us-form__custom-select-items div {
   padding: 17px 20px;
   cursor: pointer;
-}
-
-.contact-us-form__custom-select-items div:hover {
-  color: $accent-text-color;
-}
-
-.contact-us-form__custom-select-items div:focus,
-.contact-us-form__custom-select-items div:active {
-  outline: none;
-  color: $secondary-text-color;
-  background-color: $accent-bg-color;
 }
 
 .contact-us-form__custom-select-select-hidden {
@@ -459,4 +436,61 @@
   @media (min-width: $desktop-width) {
     width: 350px;
   }
+}
+
+.contact-us-form__custom-select-selected:hover,
+.contact-us-form__custom-select-selected:focus,
+.contact-us-form__select:hover,
+.contact-us-form__select:focus,
+.contact-us-form__input:hover,
+.contact-us-form__input:focus,
+.contact-us-form__message:hover,
+.contact-us-form__message:focus {
+  outline: none;
+  border-color: $secondary-text-color;
+}
+
+.contact-us-form__custom-select-items div:hover {
+  color: $accent-text-color;
+}
+
+.contact-us-form__custom-select-items div:focus,
+.contact-us-form__custom-select-items div:active {
+  outline: none;
+  color: $secondary-text-color;
+  background-color: $accent-bg-color;
+}
+
+.contact-us-form__input--error,
+.contact-us-form__message--error,
+.contact-us-form__select--error,
+.contact-us-form__custom-select-selected--error {
+  background-color: $input-error-background-color;
+  border-color: $input-error-border-color;
+}
+
+.contact-us-form__input:disabled,
+.contact-us-form__input.disabled,
+.contact-us-form__message.disabled,
+.contact-us-form__select:disabled,
+.contact-us-form__select.disabled,
+.contact-us-form__custom-select-selected.disabled {
+  pointer-events: none;
+  background-color: $input-disabled-background-color;
+  border-color: $input-disabled-border-color;
+}
+
+.contact-us-form__input-wrapper--city:has(.contact-us-form__custom-select-selected.disabled) .contact-us-form__custom-select {
+  &::after {
+    display: none;
+  }
+}
+
+.contact-us-form__label:has(+ .contact-us-form__input:disabled),
+.contact-us-form__label:has(+ .contact-us-form__input.disabled),
+.contact-us-form__label:has(+ .contact-us-form__message.disabled),
+.contact-us-form__label:has(+ .contact-us-form__select:disabled),
+.contact-us-form__label:has(+ .contact-us-form__select.disabled),
+.contact-us-form__input-wrapper--city:has(.contact-us-form__custom-select-selected.disabled) .contact-us-form__label {
+  color: $label-disabled-color;
 }

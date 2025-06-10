@@ -78,24 +78,3 @@ modalForm.addEventListener('submit', (event) => {
     modalForm.submit();
   }
 });
-
-// contactUsForm.addEventListener('submit', (event) => {
-//   const inputs = contactUsForm.querySelectorAll('.contact-us-form__input, .contact-us-form__select');
-
-//   inputs.forEach((input) => {
-//     input.classList.remove('contact-us-form__input--error');
-//   });
-
-//   let isValid = true;
-
-//   inputs.forEach((input) => {
-//     if (!input.checkValidity()) {
-//       input.classList.add('contact-us-form__input--error');
-//       isValid = false;
-//     }
-//   });
-
-//   if (!isValid) {
-//     event.preventDefault();
-//   }
-// });
