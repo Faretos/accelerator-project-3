@@ -495,6 +495,16 @@
   }
 }
 
+.contact-us-form__label:has(+ .contact-us-form__input:hover),
+.contact-us-form__label:has(+ .contact-us-form__input:focus),
+.contact-us-form__label:has(+ .contact-us-form__message:hover),
+.contact-us-form__label:has(+ .contact-us-form__message:focus),
+.contact-us-form__label:has(+ .contact-us-form__select:hover),
+.contact-us-form__label:has(+ .contact-us-form__select:focus),
+.contact-us-form__input-wrapper--city:has(.contact-us-form__custom-select-selected:hover) .contact-us-form__label {
+  opacity: 1;
+}
+
 .contact-us-form__button:hover {
   background-color: $secondary-button-bg-color;
   color: $accent-text-color;

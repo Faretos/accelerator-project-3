@@ -64,6 +64,7 @@
 
 .news__theme-button {
   display: inline-block;
+  transition: color 0.3s ease, background-color 0.3 ease, border-color 0.3s ease;
   width: auto;
   padding: 11px 14px 9px 15px;
   font-family: $primary-font;
@@ -77,6 +78,7 @@
   border: 2px solid transparent;
   border-radius: 20px;
   opacity: 0.6;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding: 14px 20px;
@@ -440,6 +442,7 @@
 .news__card-link-wrapper a {
   display: block;
   position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   width: 30px;
   height: 30px;
   background-color: $primary-button-bg-color;
@@ -451,6 +454,7 @@
     top: 50%;
     right: 11px;
     transform: translateY(-50%);
+    transition: transform 0.3s ease, background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-arrow-icon-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -477,11 +481,13 @@
   position: absolute;
   top: 0;
   left: 15px;
+  transition: background-color 0.3s ease;
   width: 22px;
   height: 22px;
   margin: 0;
   background-color: transparent;
   border: none;
+  border-radius: 50%;
 
   &::after {
     @include pseudo(10px, 10px);
@@ -489,6 +495,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(180deg);
+    transition: background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-slider-arrow-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -506,11 +513,13 @@
   top: 0;
   left: auto;
   right: 15px;
+  transition: background-color 0.3s ease;
   width: 22px;
   height: 22px;
   margin: 0;
   background-color: transparent;
   border: none;
+  border-radius: 50%;
 
   &::after {
     @include pseudo(10px, 10px);
@@ -518,6 +527,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-slider-arrow-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -559,7 +569,8 @@
   border-radius: 50%;
   border: none;
   text-transform: uppercase;
-  counter-increment: chapter 1;
+  opacity: 0.5;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -589,6 +600,116 @@
   background-color: $primary-button-bg-color;
   color: $secondary-text-color;
   font-weight: 500;
+  opacity: 1;
+}
+
+.news__theme-button:not(.news__theme-button--open):hover {
+  opacity: 1;
+}
+
+.news__theme-button:not(.news__theme-button--open):focus {
+  outline: none;
+  background-color: $secondary-bg-color;
+  opacity: 1;
+}
+
+.news__theme-button:not(.news__theme-button--open):active {
+  opacity: 0.6;
+}
+
+.news__theme-button--open:focus {
+  outline: none;
+}
+
+.news__card:focus {
+  outline: none;
+}
+
+.news__card-link-wrapper a:hover {
+  background-color: $secondary-button-bg-color;
+
+  &::after {
+    background-color: $primary-button-bg-color;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.news__card-link-wrapper a:focus {
+  outline: none;
+
+  &::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.news__card-link-wrapper a:active {
+  background-color: $secondary-button-bg-color;
+
+  &::after {
+    background-color: $translucent-accent-text-color;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.news__content-swiper .news__content-pagination .news__pagination-btn:hover {
+  border: 2px solid $accent-bg-color;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.news__content-swiper .news__content-pagination .news__pagination-btn:not(.active):focus {
+  outline: none;
+  background-color: $secondary-button-bg-color;
+  border: 2px solid $accent-bg-color;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.news__content-swiper .news__content-pagination .news__pagination-btn.active:focus {
+  outline: none;
+}
+
+.news__content-prev-slide:hover,
+.news__content-next-slide:hover {
+  &::after {
+    background-color: $translucent-accent-text-color;
+  }
+}
+
+.news__content-swiper .news__content-pagination .news__pagination-btn:not(.active):active {
+  color: $secondary-text-color;
+  background-color: $active-pagination-color;
+  border-color: $active-pagination-color;
+}
+
+.news__content-prev-slide:focus,
+.news__content-next-slide:focus {
+  outline: none;
+  background-color: $secondary-bg-color;
+}
+
+.news__content-prev-slide:active,
+.news__content-next-slide:active {
+  background-color: $secondary-bg-color;
+
+  &::after {
+    background-color: $translucent-accent-text-color;
+  }
+}
+
+.news__card-link-wrapper.disabled a {
+  pointer-events: none;
+  color: $disabled-color;
+  background-color: transparent;
+  border-color: $disabled-color;
+
+  &::before {
+    background-color: $disabled-color;
+  }
+
+  &::after {
+    background-color: $secondary-button-bg-color;
+  }
 }
 
 .news__content-prev-slide:disabled,
