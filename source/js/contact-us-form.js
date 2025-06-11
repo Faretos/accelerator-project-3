@@ -3,12 +3,15 @@ const inputs = contactUsForm.querySelectorAll('.contact-us-form__input, .contact
 const nameInput = contactUsForm.querySelector('#contact-us-form-name');
 const phoneInput = contactUsForm.querySelector('#contact-us-form-phone');
 const citySelect = contactUsForm.querySelector('#contact-us-form-city');
+const customCitySelect = contactUsForm.querySelector('.contact-us-form__custom-select');
 const personalDataInput = contactUsForm.querySelector('#contact-us-form-personal-data');
 const namePattern = /^[A-Za-zА-Яа-яЁё]+ [A-Za-zА-Яа-яЁё]+$/;
 const phonePattern = /^\+7\d{10}$/;
 let isValid = true;
 
 contactUsForm.setAttribute('novalidate', '');
+citySelect.style.display = 'none';
+customCitySelect.style.display = 'block';
 
 function valdateName() {
   if (nameInput.value.trim() === '') {
@@ -114,6 +117,5 @@ inputs.forEach((input) => {
         input.setCustomValidity('');
       }
     }
-
   });
 });

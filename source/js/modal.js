@@ -35,3 +35,5 @@ body.addEventListener('click', (event) => {
     closeModalWindow();
   }
 });
+
+export {closeModalWindow};

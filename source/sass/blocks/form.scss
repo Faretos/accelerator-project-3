@@ -79,9 +79,10 @@
 
 .form__input {
   position: relative;
+  transition: border-color 0.3s ease;
   width: 100%;
   min-height: 44px;
-  padding: 18px 36px 18px 20px;
+  padding: 11px 36px 11px 20px;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 1;
@@ -98,33 +99,6 @@
 
 .form__wrapper--city {
   position: relative;
-
-
-  &::after {
-    @include pseudo(16px, 16px);
-
-    top: 36px;
-    right: 20px;
-    z-index: 2;
-    transition: transform 0.3s ease;
-    mask-image: url("/__spritemap#sprite-arrow-down-icon-view");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 100%;
-    background-color: $primary-text-color;
-  }
-
-  @media (min-width: $tablet-width) {
-    &::after {
-      top: 49px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::after {
-      top: 48px;
-    }
-  }
 }
 
 .form__wrapper--city-open {
@@ -152,8 +126,79 @@
   }
 }
 
-.form__select:focus ~ .form__wrapper--city::after {
-  transform: rotate(180deg);
+.form__custom-select {
+  display: none;
+  position: relative;
+
+  &::after {
+    @include pseudo(16px, 16px);
+
+    top: 14px;
+    right: 20px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    mask-image: url("/__spritemap#sprite-arrow-down-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $primary-text-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: 49px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      top: 48px;
+    }
+  }
+}
+
+.form__custom-select--open {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.form__custom-select-selected {
+  width: 100%;
+  min-height: 44px;
+  padding: 14px 20px 11px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $primary-text-color;
+  border: 1px solid $input-border-color;
+  border-radius: 8px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
+  }
+}
+
+.form__custom-select-items {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  overflow: hidden;
+  width: 260px;
+  padding: 1px;
+  background-color: $secondary-bg-color;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.form__custom-select-items div {
+  padding: 17px 20px;
+  cursor: pointer;
+}
+
+.form__custom-select-select-hidden {
+  display: none;
 }
 
 .form__input--checkbox {
@@ -213,10 +258,10 @@
   }
 
   &::after {
-    @include pseudo(8px, 8px);
+    @include pseudo(10px, 10px);
 
     top: 50%;
-    right: 16px;
+    right: 15px;
     transform: translateY(-50%);
     mask-image: url("/__spritemap#sprite-arrow-icon-view");
     mask-repeat: no-repeat;

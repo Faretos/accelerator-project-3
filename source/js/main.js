@@ -9,3 +9,4 @@ import './faq-accordion';
 import './swiper-reviews';
 import './modal-form';
 import './contact-us-form';
+import './modal-select';
