@@ -1,10 +1,8 @@
 const modalForm = document.querySelector('.modal-window__form');
-const contactUsForm = document.querySelector('.contact-us-form__form');
 const namePattern = /^[A-Za-zА-Яа-яЁё]+ [A-Za-zА-Яа-яЁё]+$/;
 const phonePattern = /^\+7\d{10}$/;
 
 modalForm.setAttribute('novalidate', '');
-contactUsForm.setAttribute('novalidate', '');
 
 modalForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -17,13 +15,10 @@ modalForm.addEventListener('submit', (event) => {
 
   inputs.forEach((input) => {
     input.classList.remove('form__input--error');
+    input.setCustomValidity('');
   });
 
   let isValid = true;
-  nameInput.setCustomValidity('');
-  phoneInput.setCustomValidity('');
-  citySelect.setCustomValidity('');
-  personalDataInput.setCustomValidity('');
 
   if (nameInput.value.trim() === '') {
     isValid = false;

@@ -189,6 +189,7 @@
 
 .contact-us-form__input {
   position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   width: 100%;
   min-height: 50px;
   padding: 14px 25px;
@@ -206,6 +207,7 @@
 
 .contact-us-form__message {
   position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   width: 100%;
   min-height: 94px;
   padding: 14px 25px;
@@ -218,6 +220,7 @@
   border: 1px solid $input-border-light-color;
   border-radius: 8px;
   cursor: pointer;
+  resize: none;
 
   @media (min-width: $tablet-width) {
     min-height: 88px;
@@ -234,6 +237,7 @@
 
 .contact-us-form__select {
   position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   width: 260px;
   min-height: 52px;
   padding: 14px 25px;
@@ -349,11 +353,13 @@
 .contact-us-form__input--checkbox {
   appearance: none;
   top: 10px;
-  padding: 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   width: 21px;
   height: 20px;
   min-height: auto;
-  background-color: $secondary-bg-color;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid $translucent-text-color;
   border-radius: 2px;
   box-sizing: border-box;
 
@@ -364,6 +370,7 @@
     left: 50%;
     z-index: 2;
     transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-check-icon-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -378,6 +385,10 @@
   }
 }
 
+.contact-us-form__input--checkbox:checked {
+  background-color: $secondary-bg-color;
+}
+
 .contact-us-form__input--checkbox:checked::after {
   width: 10px;
   height: 10px;
@@ -385,6 +396,7 @@
 
 .contact-us-form__button {
   position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
   width: 260px;
   padding: 16px 68px 14px 30px;
   font-size: 12px;
@@ -401,6 +413,7 @@
     top: 50%;
     right: 4px;
     transform: translateY(-50%);
+    transition: background-color 0.3s ease;
     background-color: $secondary-button-bg-color;
     border-radius: 50%;
   }
@@ -411,6 +424,7 @@
     top: 50%;
     right: 17px;
     transform: translateY(-50%);
+    transition: transform 0.3s ease, background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-arrow-icon-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -450,6 +464,11 @@
   border-color: $secondary-text-color;
 }
 
+.contact-us-form__input--checkbox:hover,
+.contact-us-form__input--checkbox:focus {
+  border-color: $secondary-bg-color;
+}
+
 .contact-us-form__custom-select-items div:hover {
   color: $accent-text-color;
 }
@@ -461,12 +480,54 @@
   background-color: $accent-bg-color;
 }
 
-.contact-us-form__input--error,
-.contact-us-form__message--error,
-.contact-us-form__select--error,
-.contact-us-form__custom-select-selected--error {
+.contact-us-form__input--error {
   background-color: $input-error-background-color;
   border-color: $input-error-border-color;
+}
+
+.contact-us-form__input--checkbox:checked:hover,
+.contact-us-form__input--checkbox:checked:focus {
+  background-color: transparent;
+
+  &::after {
+    background-color: $secondary-text-color;
+  }
+}
+
+.contact-us-form__button:hover {
+  background-color: $secondary-button-bg-color;
+  color: $accent-text-color;
+
+  &::before {
+    background-color: $primary-button-bg-color;
+  }
+
+  &::after {
+    background-color: $secondary-button-bg-color;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.contact-us-form__button:focus {
+  outline: none;
+
+  &::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.contact-us-form__button:active {
+  background-color: $secondary-button-bg-color;
+  color: $translucent-accent-text-color;
+
+  &::before {
+    background-color: $primary-button-bg-color;
+  }
+
+  &::after {
+    background-color: $translucent-text-color;
+    transform: translateY(-50%) rotate(45deg);
+  }
 }
 
 .contact-us-form__input:disabled,
@@ -478,6 +539,23 @@
   pointer-events: none;
   background-color: $input-disabled-background-color;
   border-color: $input-disabled-border-color;
+}
+
+.contact-us-form__input--checkbox:disabled {
+  pointer-events: none;
+  background-color: $secondary-translucent-text-color;
+  border-color: $secondary-bg-color;
+}
+
+.contact-us-form__input--checkbox:checked:disabled,
+.contact-us-form__input--checkbox:checked.disabled {
+  pointer-events: none;
+  background-color: $disabled-color;
+  border-color: $disabled-color;
+
+  &::after {
+    background-color: $secondary-text-color;
+  }
 }
 
 .contact-us-form__input-wrapper--city:has(.contact-us-form__custom-select-selected.disabled) .contact-us-form__custom-select {
@@ -493,4 +571,19 @@
 .contact-us-form__label:has(+ .contact-us-form__select.disabled),
 .contact-us-form__input-wrapper--city:has(.contact-us-form__custom-select-selected.disabled) .contact-us-form__label {
   color: $label-disabled-color;
+}
+
+.contact-us-form__button:disabled,
+.contact-us-form__button.disabled {
+  pointer-events: none;
+  color: $disabled-color;
+  border-color: $disabled-color;
+
+  &::before {
+    background-color: $disabled-color;
+  }
+
+  &::after {
+    background-color: $secondary-translucent-text-color;
+  }
 }

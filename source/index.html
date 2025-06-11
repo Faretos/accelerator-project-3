@@ -1471,11 +1471,11 @@
           <form class="contact-us-form__form" method="post" action="https://echo.htmlacademy.ru" id="contact-us-form-form">
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--name">
               <label class="contact-us-form__label" for="contact-us-form-name">Имя</label>
-              <input class="contact-us-form__input" type="text" name="name" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Например: Иван Иванов" id="contact-us-form-name" required>
+              <input class="contact-us-form__input" type="text" name="contact-us-form-name" id="contact-us-form-name" required>
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--phone">
               <label class="contact-us-form__label" for="contact-us-form-phone">Телефон</label>
-              <input class="contact-us-form__input" type="tel" name="phone" pattern="\+7 \d{3} \d{3}-\d{4}$" title="Формат: +7 (XXX) XXX-XXXX" id="contact-us-form-phone" minlength="12" maxlength="12" required>
+              <input class="contact-us-form__input" type="tel" name="contact-us-form-phone" id="contact-us-form-phone" minlength="12" maxlength="12" required>
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--message">
               <label class="contact-us-form__label" for="contact-us-form-message">Ваше сообщение</label>
@@ -1486,7 +1486,7 @@
               <label class="contact-us-form__label" for="contact-us-form-city">Выберите город</label>
               <!-- CUSTOM SELECT -->
               <div class="contact-us-form__custom-select">
-                <div class="contact-us-form__custom-select-selected" data-value="hidden" tabindex="0"></div>
+                <div class="contact-us-form__custom-select-selected" data-value="hidden" tabindex="0" id="contact-us-form-custom-select-input"></div>
                 <div class="contact-us-form__custom-select-items contact-us-form__custom-select-select-hidden">
                   <div class="contact-us-form__custom-selec-item" data-value="Moscow" tabindex="0">Москва</div>
                   <div class="contact-us-form__custom-selec-item" data-value="Saint-Petersburg" tabindex="0">Санкт-Петербург</div>
@@ -1589,11 +1589,11 @@
       <form class="modal-window__form form" method="post" action="https://echo.htmlacademy.ru" id="about-form">
         <div class="form__wrapper form__wrapper--name">
           <label class="form__label" for="name">Имя</label>
-          <input class="form__input" type="text" name="name" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Например: Иван Иванов" id="name" required>
+          <input class="form__input" type="text" name="name" id="name" required>
         </div>
         <div class="form__wrapper form__wrapper--phone">
           <label class="form__label" for="phone">Телефон</label>
-          <input class="form__input" type="tel" name="phone" pattern="\+7 \d{3} \d{3}-\d{4}$" title="Формат: +7 (XXX) XXX-XXXX" id="phone" minlength="12" maxlength="12" required>
+          <input class="form__input" type="tel" name="phone" id="phone" minlength="12" maxlength="12" required>
         </div>
         <div class="form__wrapper form__wrapper--city">
           <label class="form__label" for="city">Выберите город</label>
