@@ -58,7 +58,6 @@
   background-color: transparent;
   border: 2px solid $accent-bg-color;
   border-radius: 14px;
-  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     justify-items: start;
@@ -134,7 +133,7 @@
   transition: background-color 0.3s ease;
   width: 40px;
   height: 40px;
-  border: 1px solid transparent;
+  border: none;
   background-color: $primary-button-bg-color;
   border-radius: 50%;
 
@@ -188,7 +187,7 @@
   font-size: 14px;
   line-height: 1.43;
   font-weight: 400;
-  color: $additional-text-color;
+  color: $secondary-text-color;
   text-align: left;
   opacity: 0;
 
@@ -205,149 +204,4 @@
 .faq__accordion-item.active p {
   max-height: 1500px;
   opacity: 1;
-}
-
-.faq__accordion-item:hover,
-.faq__accordion-item:focus {
-  outline: none;
-  background-color: $secondary-bg-color;
-}
-
-.faq__accordion-item:hover button,
-.faq__accordion-item:focus button {
-  outline: none;
-  background-color: transparent;
-  border-color: $primary-button-bg-color;
-
-  &::before {
-    background-color: $primary-button-bg-color;
-  }
-
-  &::after {
-    background-color: $primary-button-bg-color;
-  }
-}
-
-.faq__accordion-item button:hover,
-.faq__accordion-item button:focus {
-  outline: none;
-  background-color: transparent;
-  border-color: $primary-button-bg-color;
-
-  &::before {
-    background-color: $primary-button-bg-color;
-  }
-
-  &::after {
-    background-color: $primary-button-bg-color;
-  }
-}
-
-.faq__accordion-item:active {
-  background-color: $secondary-bg-color;
-}
-
-.faq__accordion-item:active h3 {
-  color: $active-pagination-color;
-}
-
-.faq__accordion-item:active button {
-  background-color: $active-pagination-color;
-  border-color: $active-pagination-color;
-
-  &::before {
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    background-color: $secondary-button-bg-color;
-  }
-}
-
-.faq__accordion-item button:active {
-  background-color: $active-pagination-color;
-  border-color: $active-pagination-color;
-
-  &::before {
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    background-color: $secondary-button-bg-color;
-  }
-}
-
-.faq__accordion-item.active:hover,
-.faq__accordion-item.active:focus {
-  outline: none;
-  background-color: $accent-bg-color;
-  border-color: $secondary-bg-color;
-}
-
-.faq__accordion-item.active:hover button,
-.faq__accordion-item.active:focus button {
-  outline: none;
-  background-color: transparent;
-  border-color: $secondary-button-bg-color;
-
-  &::after {
-    background-color: $secondary-button-bg-color;
-  }
-}
-
-.faq__accordion-item.active:active {
-  background-color: $active-pagination-color;
-  border-color: $active-pagination-color;
-}
-
-.faq__accordion-item.active:active h3 {
-  color: $secondary-text-color;
-}
-
-.faq__accordion-item.active:active button {
-  background-color: $secondary-bg-color;
-  border-color: $secondary-bg-color;
-
-  &::after {
-    background-color: $active-pagination-color;
-  }
-}
-
-.faq__accordion-item button:disabled {
-  pointer-events: none;
-  background-color: $disabled-color;
-  border-color: $disabled-color;
-
-  &::before {
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    background-color: $secondary-button-bg-color;
-  }
-}
-
-.faq__accordion-item.disabled {
-  pointer-events: none;
-  background-color: $disabled-color;
-  border-color: $disabled-color;
-}
-
-.faq__accordion-item.disabled h3 {
-  pointer-events: none;
-  color: $translucent-text-color;
-}
-
-.faq__accordion-item.disabled button {
-  pointer-events: none;
-  background-color: $disabled-color;
-  border-color: $disabled-color;
-
-  &::before {
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    background-color: $secondary-button-bg-color;
-  }
 }
