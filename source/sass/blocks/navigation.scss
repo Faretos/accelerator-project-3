@@ -9,8 +9,6 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: $secondary-text-color;
-  opacity: 0.7;
 }
 
 .navitagion__item:not(:last-child) {
@@ -26,7 +24,7 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-decoration: none;
-  color: $secondary-text-color;
+  color: $translucent-text-color;
 }
 
 .navigation__button {
@@ -39,7 +37,7 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-decoration: none;
-  color: $secondary-text-color;
+  color: $translucent-text-color;
   background-color: transparent;
   border: none;
 
@@ -70,14 +68,12 @@
 }
 
 .navitagion__item--item-with-list-open .navigation__button {
+  color: $secondary-text-color;
+
   &::after {
     top: 6px;
     transform: rotate(-45deg);
   }
-}
-
-.navigation__item-list-sub-item {
-  opacity: 0.6;
 }
 
 .navigation__item-list-sub-item:not(:last-child) {
@@ -92,5 +88,37 @@
   letter-spacing: 0;
   text-transform: none;
   text-decoration: none;
+  color: $secondary-translucent-text-color;
+}
+
+.navigation__link:hover,
+.navigation__button:hover,
+.navigation__link:focus,
+.navigation__button:focus {
+  outline: none;
   color: $secondary-text-color;
+}
+
+.navigation__item-list-sub-item .navigation__link:hover,
+.navigation__item-list-sub-item .navigation__link:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navigation__link:active,
+.navigation__button:active {
+  opacity: 0.6;
+}
+
+.navigation__item-list-sub-item .navigation__link:active {
+  opacity: 0.6;
+}
+
+.navigation__link:disabled,
+.navigation__link.disabled,
+.navigation__button:disabled,
+.navigation__button.disabled,
+.navigation__item-list-sub-item .navigation__link.disabled {
+  pointer-events: none;
+  color: $disabled-color;
 }
