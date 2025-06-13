@@ -315,6 +315,8 @@
 }
 
 .reviews__swiper .swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     background-color: $primary-button-bg-color;
   }
@@ -349,6 +351,7 @@
   margin: 0;
   background-color: transparent;
   border: none;
+  border-radius: 50%;
 
   &::after {
     @include pseudo(10px, 10px);
@@ -379,6 +382,7 @@
   margin: 0;
   background-color: transparent;
   border: none;
+  border-radius: 50%;
 
   &::after {
     @include pseudo(10px, 10px);
@@ -396,6 +400,28 @@
   @media (min-width: $tablet-width) {
     left: auto;
     right: -2px;
+  }
+}
+
+.reviews-prev-slide:hover,
+.reviews-next-slide:hover {
+  &::after {
+    background-color: $translucent-accent-text-color;
+  }
+}
+
+.reviews-prev-slide:focus,
+.reviews-next-slide:focus {
+  outline: none;
+  background-color: $secondary-bg-color;
+}
+
+.reviews-prev-slide:active,
+.reviews-next-slide:active {
+  background-color: $secondary-bg-color;
+
+  &::after {
+    background-color: $translucent-accent-text-color;
   }
 }
 

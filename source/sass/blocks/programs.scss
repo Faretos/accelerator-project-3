@@ -366,6 +366,8 @@
 }
 
 .programs__swiper .swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     background-color: $primary-button-bg-color;
   }
@@ -438,6 +440,11 @@
     padding: 20px 77px 20px 30px;
     justify-self: flex-end;
   }
+}
+
+.programs__card:focus {
+  outline: none;
+  opacity: 0.8;
 }
 
 .programs__link:hover {

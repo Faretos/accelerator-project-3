@@ -92,3 +92,35 @@
     }
   }
 }
+
+.social-list__link:hover {
+  &::before {
+    background-color: $translucent-text-color;
+  }
+}
+
+.social-list__link:focus {
+  outline: none;
+  background-color: $secondary-text-color;
+
+  &::before {
+    background-color: $accent-text-color;
+  }
+}
+
+.social-list__link:active {
+  background-color: $active-pagination-color;
+
+  &::before {
+    background-color: $secondary-text-color;
+  }
+}
+
+.social-list__link.disabled {
+  pointer-events: none;
+  background-color: $disabled-color;
+
+  &::before {
+    background-color: $secondary-text-color;
+  }
+}
