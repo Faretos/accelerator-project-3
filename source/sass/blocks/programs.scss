@@ -92,13 +92,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: background-color 0.3s ease;
   width: 22px;
   height: 22px;
   margin: 0;
   background-color: transparent;
   border: none;
-  border-radius: 50%;
 
   &::after {
     @include pseudo(10px, 10px);
@@ -106,7 +104,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(180deg);
-    transition: background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-slider-arrow-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -119,13 +116,11 @@
   position: absolute;
   top: 0;
   right: 0;
-  transition: background-color 0.3s ease;
   width: 22px;
   height: 22px;
   margin: 0;
   background-color: transparent;
   border: none;
-  border-radius: 50%;
 
   &::after {
     @include pseudo(10px, 10px);
@@ -133,7 +128,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-slider-arrow-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -325,7 +319,6 @@
 .programs__card-link-wrapper a {
   display: block;
   position: relative;
-  transition: background-color 0.3s ease;
   width: 30px;
   height: 30px;
   background-color: $primary-button-bg-color;
@@ -337,7 +330,6 @@
     top: 50%;
     right: 11px;
     transform: translateY(-50%);
-    transition: transform 0.3s ease, background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-arrow-icon-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -366,8 +358,6 @@
 }
 
 .programs__swiper .swiper-scrollbar-horizontal .swiper-scrollbar-drag {
-  cursor: pointer;
-
   @media (min-width: $tablet-width) {
     background-color: $primary-button-bg-color;
   }
@@ -376,7 +366,6 @@
 .programs__link {
   display: block;
   position: relative;
-  transition: background-color 0.3s ease, color 0.3s ease;
   width: 205px;
   margin: 0 0 0 15px;
   padding: 16px 67px 14px 31px;
@@ -397,7 +386,6 @@
     top: 50%;
     right: 4px;
     transform: translateY(-50%);
-    transition: background-color 0.3s ease;
     background-color: $primary-button-bg-color;
     border-radius: 50%;
   }
@@ -408,7 +396,6 @@
     top: 50%;
     right: 17px;
     transform: translateY(-50%);
-    transition: background-color 0.3s ease, transform 0.3s ease;
     mask-image: url("/__spritemap#sprite-arrow-icon-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -439,119 +426,6 @@
     width: 234px;
     padding: 20px 77px 20px 30px;
     justify-self: flex-end;
-  }
-}
-
-.programs__card:focus {
-  outline: none;
-  opacity: 0.8;
-}
-
-.programs__link:hover {
-  color: $secondary-text-color;
-  background-color: $primary-button-bg-color;
-
-  &::before {
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    transform: translateY(-50%) rotate(45deg);
-    background-color: $primary-button-bg-color;
-  }
-}
-
-.programs__link:focus {
-  outline: none;
-
-  &::after {
-    transform: translateY(-50%) rotate(45deg);
-  }
-}
-
-.programs__link:active {
-  color: $translucent-text-color;
-  background-color: $primary-button-bg-color;
-
-  &::before {
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    transform: translateY(-50%) rotate(45deg);
-    background-color: $translucent-accent-text-color;
-  }
-}
-
-.programs__card-link-wrapper a:hover {
-  background-color: $secondary-button-bg-color;
-
-  &::after {
-    background-color: $primary-button-bg-color;
-    transform: translateY(-50%) rotate(45deg);
-  }
-}
-
-.programs__card-link-wrapper a:focus {
-  outline: none;
-
-  &::after {
-    transform: translateY(-50%) rotate(45deg);
-  }
-}
-
-.programs__card-link-wrapper a:active {
-  background-color: $secondary-button-bg-color;
-
-  &::after {
-    background-color: $translucent-accent-text-color;
-    transform: translateY(-50%) rotate(45deg);
-  }
-}
-
-.programs__prev-slide:hover,
-.programs__next-slide:hover {
-  &::after {
-    background-color: $translucent-accent-text-color;
-  }
-}
-
-.programs__prev-slide:focus,
-.programs__next-slide:focus {
-  outline: none;
-  background-color: $secondary-bg-color;
-}
-
-.programs__prev-slide:active,
-.programs__next-slide:active {
-  background-color: $secondary-bg-color;
-
-  &::after {
-    background-color: $translucent-accent-text-color;
-  }
-}
-
-.programs__link.disabled {
-  pointer-events: none;
-  color: $disabled-color;
-  background-color: transparent;
-  border-color: $disabled-color;
-
-  &::before {
-    background-color: $disabled-color;
-  }
-
-  &::after {
-    background-color: $secondary-button-bg-color;
-  }
-}
-
-.programs__card-link-wrapper.disabled a {
-  pointer-events: none;
-  background-color: $disabled-color;
-
-  &::after {
-    background-color: $secondary-translucent-text-color;
   }
 }
 

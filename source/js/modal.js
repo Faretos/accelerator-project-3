@@ -4,7 +4,6 @@ const body = document.body;
 const modalOpenButton = document.getElementById('modal-open');
 const modalWindow = document.querySelector('.modal-window');
 const modalCloseButton = modalWindow.querySelector('.modal-window__button');
-const form = modalWindow.querySelector('.form');
 let scrollPosition = 0;
 
 
@@ -20,7 +19,6 @@ function closeModalWindow() {
   if (modalWindow.classList.contains('modal-window--open')) {
     pageState.closeModal();
     modalWindow.classList.remove('modal-window--open');
-    form.reset();
     window.scrollTo({top: scrollPosition, behavior: 'smooth'});
   }
 }
@@ -37,5 +35,3 @@ body.addEventListener('click', (event) => {
     closeModalWindow();
   }
 });
-
-export {closeModalWindow};

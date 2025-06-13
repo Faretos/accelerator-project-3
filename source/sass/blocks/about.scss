@@ -131,7 +131,6 @@
   width: 223px;
   margin: 0 0 40px;
   padding: 16px 57px 14px 19px;
-  transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 12px;
   line-height: 1;
   font-weight: 500;
@@ -146,7 +145,6 @@
     top: 50%;
     right: 4px;
     transform: translateY(-50%);
-    transition: background-color 0.3s ease;
     background-color: $primary-button-bg-color;
     border-radius: 50%;
   }
@@ -157,7 +155,6 @@
     top: 50%;
     right: 17px;
     transform: translateY(-50%);
-    transition: transform 0.3s ease, color 0.3s ease;
     mask-image: url("/__spritemap#sprite-arrow-icon-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -292,62 +289,10 @@
   font-size: 14px;
   line-height: 1.42;
   font-weight: 300;
-  color: $additional-text-color;
+  color: $secondary-text-color;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 1.25;
-  }
-}
-
-.about__about-button:hover {
-  color: $secondary-text-color;
-  background-color: $primary-button-bg-color;
-
-  &::before {
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    transform: translateY(-50%) rotate(45deg);
-    background-color: $primary-button-bg-color;
-  }
-}
-
-.about__about-button:focus {
-  outline: none;
-
-  &::after {
-    transform: translateY(-50%) rotate(45deg);
-  }
-}
-
-.about__about-button:active {
-  color: $translucent-text-color;
-  background-color: $primary-button-bg-color;
-
-  &::before {
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    transform: translateY(-50%) rotate(45deg);
-    background-color: $translucent-accent-text-color;
-  }
-}
-
-.about__about-button:disabled,
-.about__about-button.disabled {
-  pointer-events: none;
-  color: $disabled-color;
-  background-color: transparent;
-  border-color: $disabled-color;
-
-  &::before {
-    background-color: $disabled-color;
-  }
-
-  &::after {
-    background-color: $secondary-button-bg-color;
   }
 }
