@@ -45,7 +45,7 @@
 
 .reviews__swiper {
   position: static;
-  padding: 0 15px 1px;
+  padding: 0 15px;
 
   @media (min-width: $tablet-width) {
     padding: 0 45px;
@@ -56,8 +56,12 @@
   }
 }
 
+.swiper-autoheight .reviews__swiper-wrapper {
+  align-items: stretch;
+}
+
 .reviews__slide {
-  padding: 30px 15px 29px;
+  padding: 30px 15px;
   border: 2px solid $accent-text-color;
   border-radius: 16px;
 
