@@ -33,10 +33,10 @@
     <!-- NAV MENU -->
     <nav class="header__navigation navigation">
       <ul class="navigation__list list-style-reset">
-        <li class="navitagion__item">
+        <li class="navigation__item">
           <a class="navigation__link" href="#about">О проекте</a>
         </li>
-        <li class="navitagion__item navitagion__item--item-with-list">
+        <li class="navigation__item navigation__item--item-with-list">
           <button class="navigation__button button" type="button">Программы</button>
           <ul class="navigation__item-list list-style-reset" id="list">
             <li class="navigation__item-list-sub-item">
@@ -53,13 +53,13 @@
             </li>
           </ul>
         </li>
-        <li class="navitagion__item">
+        <li class="navigation__item">
           <a class="navigation__link" href="#grant">Как поехать</a>
         </li>
-        <li class="navitagion__item">
+        <li class="navigation__item">
           <a class="navigation__link" href="#reviews">Отзывы</a>
         </li>
-        <li class="navitagion__item navitagion__item--item-with-list">
+        <li class="navigation__item navigation__item--item-with-list">
           <button class="navigation__button button" type="button">Новости</button>
           <ul class="navigation__item-list list-style-reset">
             <li class="navigation__item-list-sub-item">
@@ -79,7 +79,7 @@
             </li>
           </ul>
         </li>
-        <li class="navitagion__item">
+        <li class="navigation__item">
           <a class="navigation__link" href="#contacts">Контакты</a>
         </li>
       </ul>
@@ -465,7 +465,7 @@
                       наши студенты весной</p>
                   </div>
                   <div class="news__card-link-wrapper">
-                    <a clas="news__card-link" href="#">
+                    <a class="news__card-link" href="#">
                       <span class="visually-hidden">Открыть новость</span>
                     </a>
                   </div>
@@ -747,7 +747,7 @@
                       наши студенты весной</p>
                   </div>
                   <div class="news__card-link-wrapper">
-                    <a clas="news__card-link" href="#">
+                    <a class="news__card-link" href="#">
                       <span class="visually-hidden">Открыть новость</span>
                     </a>
                   </div>
@@ -1029,7 +1029,7 @@
                       наши студенты весной</p>
                   </div>
                   <div class="news__card-link-wrapper">
-                    <a clas="news__card-link" href="#">
+                    <a class="news__card-link" href="#">
                       <span class="visually-hidden">Открыть новость</span>
                     </a>
                   </div>
@@ -1260,7 +1260,7 @@
       </div>
     </section>
     <!-- FAQ -->
-    <section class="faq" data-test="FAQ" if="faq">
+    <section class="faq" data-test="FAQ" id="faq">
       <div class="faq__wrapper">
         <h2 class="faq__title title-reset">Вопросы и ответы</h2>
         <div class="faq__accordion">
@@ -1500,7 +1500,7 @@
               </div>
               <!-- ORIGINAL SELECT -->
               <select class="contact-us-form__select" name="city" id="contact-us-form-city" required>
-                <option class="contact-us-form__select-option" value="" selected hidden></option>
+                <option class="contact-us-form__select-option" value="" selected hidden>Выберите город</option>
                 <option class="contact-us-form__select-option" value="Moscow">Москва</option>
                 <option class="contact-us-form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
                 <option class="contact-us-form__select-option" value="Novosibirsk">Новосибирск</option>
@@ -1578,7 +1578,7 @@
     </div>
   </footer>
   <!-- MODAL WINDOW -->
-  <div class="about__modal-window modal-window">
+  <div class="modal-window">
     <div class="modal-window__wrapper">
       <button class="modal-window__button button" type="button">
         <span class="visually-hidden">Закрыть окно</span>
@@ -1613,7 +1613,7 @@
           </div>
           <!-- ORIGINAL SELECT -->
           <select class="form__select" name="city" id="city" required>
-            <option class="form__select-option" value="" selected hidden></option>
+            <option class="form__select-option" value="" selected hidden>Выберите город</option>
             <option class="form__select-option" value="Moscow">Москва</option>
             <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
             <option class="form__select-option" value="Novosibirsk">Новосибирск</option>

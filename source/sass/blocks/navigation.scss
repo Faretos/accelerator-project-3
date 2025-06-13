@@ -2,7 +2,7 @@
   display: none;
 }
 
-.navitagion__item {
+.navigation__item {
   font-family: $primary-font;
   font-size: 16px;
   line-height: 1;
@@ -11,7 +11,7 @@
   text-transform: uppercase;
 }
 
-.navitagion__item:not(:last-child) {
+.navigation__item:not(:last-child) {
   margin: 0 0 24px;
 }
 
@@ -61,13 +61,13 @@
   transition: padding 0.3s ease, max-height 0.3s ease, opacity 0.3s ease;
 }
 
-.navitagion__item--item-with-list-open .navigation__item-list {
+.navigation__item--item-with-list-open .navigation__item-list {
   padding: 16px 0 0 16px;
   max-height: 500px;
   opacity: 1;
 }
 
-.navitagion__item--item-with-list-open .navigation__button {
+.navigation__item--item-with-list-open .navigation__button {
   color: $secondary-text-color;
 
   &::after {

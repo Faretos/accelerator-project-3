@@ -6,7 +6,7 @@ const navigation = document.querySelector('.header__navigation');
 const navList = navigation.querySelector('.navigation__list');
 const navLinks = navigation.querySelectorAll('.navigation__link');
 const navButtons = navigation.querySelectorAll('.navigation__button');
-const navItems = navigation.querySelectorAll('.navitagion__item');
+const navItems = navigation.querySelectorAll('.navigation__item');
 
 function burgerMenuToggle() {
   navigation.classList.toggle('header__navigation--open');
@@ -54,7 +54,7 @@ function removeNavLinksListeners() {
 
 function removeNavItemsClass() {
   navItems.forEach((item) => {
-    item.classList.remove('navitagion__item--item-with-list-open');
+    item.classList.remove('navigation__item--item-with-list-open');
   });
 }
 
@@ -62,8 +62,8 @@ function initBurgerMenu() {
   burgerMenuButton.addEventListener('click', burgerMenuToggle);
   navButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const item = button.closest('.navitagion__item');
-      item.classList.toggle('navitagion__item--item-with-list-open');
+      const item = button.closest('.navigation__item');
+      item.classList.toggle('navigation__item--item-with-list-open');
     });
   });
 }
