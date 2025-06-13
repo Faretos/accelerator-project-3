@@ -137,6 +137,9 @@
 
 .reviews__slide-image-wrapper img {
   display: block;
+  object-fit: cover;
+  background-color: $disabled-color;
+  border-radius: 50%;
 }
 
 .reviews__slide-program-wrapper {

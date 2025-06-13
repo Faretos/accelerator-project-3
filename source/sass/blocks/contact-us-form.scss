@@ -23,6 +23,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  background-color: $disabled-color;
 
   @media (min-width: $tablet-width) {
     width: 652px;
