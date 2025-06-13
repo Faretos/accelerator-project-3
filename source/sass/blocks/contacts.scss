@@ -90,7 +90,7 @@
   font-weight: 400;
   letter-spacing: 0.12px;
   text-transform: uppercase;
-  color: $secondary-text-color;
+  color: $additional-text-color;
   opacity: 0.8;
 
   @media (min-width: $tablet-width) {
@@ -122,6 +122,7 @@
 
 .contacts__info-item a {
   display: block;
+  position: relative;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 1.43;
@@ -198,4 +199,38 @@
   display: block;
   border-radius: 16px;
   background-color: $primary-bg-color;
+}
+
+.contacts__info-item a:hover {
+  color: $translucent-text-color;
+}
+
+.contacts__info-item a:focus {
+  outline: none;
+  color: $primary-text-color;
+
+  &::after {
+    @include pseudo(100%, 1px);
+
+    bottom: -5px;
+    left: 0;
+    background-color: $primary-text-color;
+  }
+}
+
+.contacts__info-item a:active {
+  color: $secondary-text-color;
+
+  &::after {
+    @include pseudo(100%, 1px);
+
+    bottom: -5px;
+    left: 0;
+    background-color: $secondary-text-color;
+  }
+}
+
+.contacts__info-item.disabled a {
+  pointer-events: none;
+  color: $disabled-color;
 }

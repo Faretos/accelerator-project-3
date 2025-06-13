@@ -20,75 +20,76 @@
 </head>
 
 <body class="page__body">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__image-wrapper">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="/__spritemap#sprite-logo-view" width="52" height="52">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="/__spritemap#sprite-logo-view" width="52" height="52">
+        <img src="/__spritemap#sprite-logo-view" width="52" height="52" alt="Логотип Internship">
+      </picture>
+    </div>
+    <button class="header__menu-button button" type="button">Меню</button>
+    <!-- NAV MENU -->
+    <nav class="header__navigation navigation">
+      <ul class="navigation__list list-style-reset">
+        <li class="navitagion__item">
+          <a class="navigation__link" href="#about">О проекте</a>
+        </li>
+        <li class="navitagion__item navitagion__item--item-with-list">
+          <button class="navigation__button button" type="button">Программы</button>
+          <ul class="navigation__item-list list-style-reset" id="list">
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#programs">Стажировки</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#programs">Волонтёрство</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#programs">Учеба</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#programs">Религия</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navitagion__item">
+          <a class="navigation__link" href="#grant">Как поехать</a>
+        </li>
+        <li class="navitagion__item">
+          <a class="navigation__link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="navitagion__item navitagion__item--item-with-list">
+          <button class="navigation__button button" type="button">Новости</button>
+          <ul class="navigation__item-list list-style-reset">
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Общее</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Волонтёрство</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Стажировки</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Карьера</a>
+            </li>
+            <li class="navigation__item-list-sub-item">
+              <a class="navigation__link" href="#news">Путешествия</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navitagion__item">
+          <a class="navigation__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <!-- MAIN -->
   <main class="main-container">
     <!-- HERO -->
     <section class="hero" data-test="hero">
       <h1 class="visually-hidden">Преимущества Internship</h1>
-      <header class="hero__header">
-        <div class="hero__image-wrapper">
-          <picture>
-            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="/__spritemap#sprite-logo-view" width="52" height="52">
-            <source type="image/svg+xml" media="(min-width: 768px)" srcset="/__spritemap#sprite-logo-view" width="52" height="52">
-            <img src="/__spritemap#sprite-logo-view" width="52" height="52" alt="Логотип Internship">
-          </picture>
-        </div>
-        <button class="hero__menu-button button" type="button">Меню</button>
-        <!-- NAV MENU -->
-        <nav class="hero__navigation navigation">
-          <ul class="navigation__list list-style-reset">
-            <li class="navitagion__item">
-              <a class="navigation__link" href="#">О проекте</a>
-            </li>
-            <li class="navitagion__item navitagion__item--item-with-list">
-              <button class="navigation__button button" type="button">Программы</button>
-              <ul class="navigation__item-list list-style-reset" id="list">
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Стажировки</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Волонтёрство</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Учеба</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Религия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="navitagion__item">
-              <a class="navigation__link" href="#">Как поехать</a>
-            </li>
-            <li class="navitagion__item">
-              <a class="navigation__link" href="#">Отзывы</a>
-            </li>
-            <li class="navitagion__item navitagion__item--item-with-list">
-              <button class="navigation__button button" type="button">Новости</button>
-              <ul class="navigation__item-list list-style-reset">
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Общее</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Волонтёрство</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Стажировки</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Карьера</a>
-                </li>
-                <li class="navigation__item-list-sub-item">
-                  <a class="navigation__link" href="#">Путешествия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="navitagion__item">
-              <a class="navigation__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
       <div class="hero__content-wrapper">
         <div class="hero__wrapper swiper">
           <div class="hero__swiper-wrapper swiper-wrapper">
@@ -105,13 +106,15 @@
                   <img src="./img/hero/girl-student-mobile@1x.jpg" srcset="./img/hero/girl-student-mobile@2x.jpg 2x" width="320" height="568" alt="Студентка за границей">
                 </picture>
               </div>
-              <div class="hero__card-content">
-                <h2 class="hero__card-title title-reset">Глобальный профессиональный опыт обучения за рубежом</h2>
-                <div class="hero__card-text-wrapper">
-                  <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
-                </div>
-                <div class="hero__card-button-wrapper">
-                  <button class="hero__card-button" type="button">Подробнее</button>
+              <div class="hero__card-content-wrapper">
+                <div class="hero__card-content">
+                  <h2 class="hero__card-title title-reset">Глобальный профессиональный опыт обучения за рубежом</h2>
+                  <div class="hero__card-text-wrapper">
+                    <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                  </div>
+                  <div class="hero__card-button-wrapper">
+                    <button class="hero__card-button" type="button">Подробнее</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -128,13 +131,15 @@
                   <img src="./img/hero/students-volunteers-mobile@1x.jpg" srcset="./img/hero/students-volunteers-mobile@2x.jpg 2x" width="320" height="568" alt="Студенты волонтеры">
                 </picture>
               </div>
-              <div class="hero__card-content">
-                <h2 class="hero__card-title title-reset">Волонтёрские программы – внесите свой вклад в общество</h2>
-                <div class="hero__card-text-wrapper">
-                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-                </div>
-                <div class="hero__card-button-wrapper">
-                  <button class="hero__card-button" type="button">Подробнее</button>
+              <div class="hero__card-content-wrapper">
+                <div class="hero__card-content">
+                  <h2 class="hero__card-title title-reset">Волонтёрские программы – внесите свой вклад в общество</h2>
+                  <div class="hero__card-text-wrapper">
+                    <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                  </div>
+                  <div class="hero__card-button-wrapper">
+                    <button class="hero__card-button" type="button">Подробнее</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -151,13 +156,15 @@
                   <img src="./img/hero/stundents-interns-mobile@1x.jpg" srcset="./img/hero/stundents-interns-mobile@2x.jpg 2x" width="320" height="568" alt="Студенты волонтеры">
                 </picture>
               </div>
-              <div class="hero__card-content">
-                <h2 class="hero__card-title title-reset">Программы стажировок в крупнейших компаниях мира</h2>
-                <div class="hero__card-text-wrapper">
-                  <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-                </div>
-                <div class="hero__card-button-wrapper">
-                  <button class="hero__card-button" type="button">Подробнее</button>
+              <div class="hero__card-content-wrapper">
+                <div class="hero__card-content">
+                  <h2 class="hero__card-title title-reset">Программы стажировок в крупнейших компаниях мира</h2>
+                  <div class="hero__card-text-wrapper">
+                    <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                  </div>
+                  <div class="hero__card-button-wrapper">
+                    <button class="hero__card-button" type="button">Подробнее</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -167,7 +174,7 @@
       </div>
     </section>
     <!-- ABOUT -->
-    <section class="about" data-test="about">
+    <section class="about" data-test="about" id="about">
       <div class="about__wrapper">
         <div class="about__text-content-wrapper">
           <div class="about__title-wrapper">
@@ -214,43 +221,9 @@
           </li>
         </ul>
       </div>
-      <!-- MODAL WINDOW -->
-      <div class="about__modal-window modal-window">
-        <div class="modal-window__wrapper">
-          <button class="modal-window__button button" type="button">
-            <span class="visually-hidden">Закрыть окно</span>
-          </button>
-          <h3 class="modal-window__title title-reset">Напишите нам</h3>
-          <p class="modal-window__text text-offset-reset">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-          <!-- FORM -->
-          <form class="modal-window__form form" method="post" action="https://echo.htmlacademy.ru" id="about-form">
-            <div class="form__wrapper form__wrapper--name">
-              <label class="form__label" for="name">Имя</label>
-              <input class="form__input" type="text" name="name" id="name" required>
-            </div>
-            <div class="form__wrapper form__wrapper--phone">
-              <label class="form__label" for="phone">Телефон</label>
-              <input class="form__input" type="tel" name="phone" id="phone" required>
-            </div>
-            <div class="form__wrapper form__wrapper--city">
-              <label class="form__label" for="city">Выберите город</label>
-              <select class="form__select" name="city" id="city" required>
-                <option class="form__select-option" value="" selected hidden></option>
-                <option class="form__select-option" value="Moscow">Москва</option>
-                <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
-              </select>
-            </div>
-            <div class="form__wrapper form__wrapper--personal-data">
-              <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих персональных данных</label>
-              <input class="form__input form__input--checkbox" type="checkbox" name="personal-data" id="personal-data" required>
-            </div>
-            <button class="form__button button" type="submit">отправить</button>
-          </form>
-        </div>
-      </div>
     </section>
     <!-- PROGRAMS -->
-    <section class="programs" data-test="programs">
+    <section class="programs" data-test="programs" id="programs">
       <div class="programs__wrapper">
         <h2 class="programs__title title-reset">Программы</h2>
         <div class="programs__swiper swiper">
@@ -356,7 +329,7 @@
       </div>
     </section>
     <!-- GRANT -->
-    <section class="grant" data-test="grant">
+    <section class="grant" data-test="grant" id="grant">
       <div class="grant__wrapper">
         <div class="grant__how-to-go-wrapper">
           <h2 class="grant__title title-reset">Как поехать</h2>
@@ -406,7 +379,7 @@
       </div>
     </section>
     <!-- NEWS -->
-    <section class="news" data-test="news">
+    <section class="news" data-test="news" id="news">
       <div class="news__wrapper">
         <h2 class="news__title title-reset">Новости и материалы</h2>
         <!-- THEME SWIPER -->
@@ -429,7 +402,6 @@
           <div class="news__content-swiper-wrapper swiper-wrapper">
             <!-- SLIDE 1 -->
             <div class="news__card swiper-slide" tabindex="0">
-              <!-- CARD 1 -->
               <div class="news__card-content news__card-content--first-card">
                 <div class="news__card-img-wrapper">
                   <picture>
@@ -466,7 +438,7 @@
                 </div>
               </div>
             </div>
-            <!-- CARD 2 -->
+            <!-- SLIDE 2 -->
             <div class="news__card swiper-slide" tabindex="0">
               <div class="news__card-content news__card-content--second-card">
                 <div class="news__card-img-wrapper">
@@ -500,9 +472,8 @@
                 </div>
               </div>
             </div>
-            <!-- SLIDE 2 -->
+            <!-- SLIDE 3 -->
             <div class="news__card swiper-slide" tabindex="0">
-              <!-- CARD 1 -->
               <div class="news__card-content news__card-content--first-card">
                 <div class="news__card-img-wrapper">
                   <picture>
@@ -535,7 +506,7 @@
                 </div>
               </div>
             </div>
-            <!-- CARD 2 -->
+            <!-- SLIDE 4 -->
             <div class="news__card swiper-slide" tabindex="0">
               <div class="news__card-content news__card-content--second-card">
                 <div class="news__card-img-wrapper">
@@ -570,9 +541,8 @@
                 </div>
               </div>
             </div>
-            <!-- SLIDE 3 -->
+            <!-- SLIDE 5 -->
             <div class="news__card swiper-slide" tabindex="0">
-              <!-- CARD 1 -->
               <div class="news__card-content news__card-content--first-card">
                 <div class="news__card-img-wrapper">
                   <picture>
@@ -609,7 +579,7 @@
                 </div>
               </div>
             </div>
-            <!-- CARD 2 -->
+            <!-- SLIDE 6 -->
             <div class="news__card swiper-slide" tabindex="0">
               <div class="news__card-content news__card-content--second-card">
                 <div class="news__card-img-wrapper">
@@ -643,9 +613,8 @@
                 </div>
               </div>
             </div>
-            <!-- SLIDE 4 -->
+            <!-- SLIDE 7 -->
             <div class="news__card swiper-slide" tabindex="0">
-              <!-- CARD 1 -->
               <div class="news__card-content news__card-content--first-card">
                 <div class="news__card-img-wrapper">
                   <picture>
@@ -678,7 +647,571 @@
                 </div>
               </div>
             </div>
-            <!-- CARD 2 -->
+            <!-- SLIDE 8 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--second-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/working-table-desktop@1x.webp, ./img/news/working-table-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/working-table-tablet@1x.webp, ./img/news/working-table-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/working-table-tablet@1x.webp, ./img/news/working-table-tablet@2x.webp 2x" width="290" height="240">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/working-table-desktop@1x.jpg, ./img/news/working-table-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/working-table-tablet@1x.jpg, ./img/news/working-table-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/working-table-tablet@1x.jpg" srcset="./img/news/working-table-tablet@2x.jpg 2x" width="290" height="240" alt="Рабочий стол">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">10/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Построй свою
+                      карьеру</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Ведущие компании
+                      готовы трудоустроить
+                      выпускников стажировки</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 9 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--first-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/interview-with-intern-student-desktop@1x.webp, ./img/news/interview-with-intern-student-desktop@2x.webp 2x" width="604" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/interview-with-intern-student-tablet@1x.webp, ./img/news/interview-with-intern-student-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/interview-with-intern-student-mobile@1x.webp, ./img/news/interview-with-intern-student-mobile@2x.webp 2x" width="290" height="330">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/interview-with-intern-student-desktop@1x.jpg, ./img/news/interview-with-intern-student-desktop@2x.jpg 2x" width="604" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/interview-with-intern-student-tablet@1x.jpg, ./img/news/interview-with-intern-student-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/interview-with-intern-student-mobile@1x.jpg" srcset="./img/news/interview-with-intern-student-mobile@2x.jpg 2x" width="290" height="330" alt="Интервью с участницей программы стажировки">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span>23/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3>Интервью
+                      с участницей
+                      программы
+                      стажировки</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Саша рассказывает,
+                      как попала в программу
+                      и как прошла 6-месячная
+                      стажировка в ISOFound</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 10 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--second-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/city-near-the-shore-desktop@1x.webp, ./img/news/city-near-the-shore-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/city-near-the-shore-tablet@1x.webp, ./img/news/city-near-the-shore-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/city-near-the-shore-mobile@1x.webp, ./img/news/city-near-the-shore-mobile@2x.webp 2x" width="290" height="240">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/city-near-the-shore-desktop@1x.jpg, ./img/news/city-near-the-shore-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/city-near-the-shore-tablet@1x.jpg, ./img/news/city-near-the-shore-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/city-near-the-shore-mobile@1x.jpg" srcset="./img/news/city-near-the-shore-mobile@2x.jpg 2x" width="290" height="240" alt="Город на побережье">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">20/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Путешествуем
+                      по миру</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Какие места посещают
+                      наши студенты весной</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a clas="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 11 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--first-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/girl-with-a-volunteer-badge-desktop@1x.webp, ./img/news/girl-with-a-volunteer-badge-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.webp, ./img/news/girl-with-a-volunteer-badge-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.webp, ./img/news/girl-with-a-volunteer-badge-tablet@2x.webp 2x" width="290" height="330">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/girl-with-a-volunteer-badge-desktop@1x.jpg, ./img/news/girl-with-a-volunteer-badge-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.jpg, ./img/news/girl-with-a-volunteer-badge-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/girl-with-a-volunteer-badge-tablet@1x.jpg" srcset="./img/news/girl-with-a-volunteer-badge-tablet@2x.jpg 2x" width="290" height="330" alt="Девушка со значком 'Волонтер'">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">17/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Новая программа
+                      волонтёрства</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Программа помощи детям
+                      длительностью 4 месяца</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 12 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--second-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/working-table-desktop@1x.webp, ./img/news/working-table-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/working-table-tablet@1x.webp, ./img/news/working-table-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/working-table-tablet@1x.webp, ./img/news/working-table-tablet@2x.webp 2x" width="290" height="240">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/working-table-desktop@1x.jpg, ./img/news/working-table-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/working-table-tablet@1x.jpg, ./img/news/working-table-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/working-table-tablet@1x.jpg" srcset="./img/news/working-table-tablet@2x.jpg 2x" width="290" height="240" alt="Рабочий стол">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">10/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Построй свою
+                      карьеру</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Ведущие компании
+                      готовы трудоустроить
+                      выпускников стажировки</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 13 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--first-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/interview-with-intern-student-desktop@1x.webp, ./img/news/interview-with-intern-student-desktop@2x.webp 2x" width="604" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/interview-with-intern-student-tablet@1x.webp, ./img/news/interview-with-intern-student-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/interview-with-intern-student-mobile@1x.webp, ./img/news/interview-with-intern-student-mobile@2x.webp 2x" width="290" height="330">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/interview-with-intern-student-desktop@1x.jpg, ./img/news/interview-with-intern-student-desktop@2x.jpg 2x" width="604" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/interview-with-intern-student-tablet@1x.jpg, ./img/news/interview-with-intern-student-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/interview-with-intern-student-mobile@1x.jpg" srcset="./img/news/interview-with-intern-student-mobile@2x.jpg 2x" width="290" height="330" alt="Интервью с участницей программы стажировки">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span>23/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3>Интервью
+                      с участницей
+                      программы
+                      стажировки</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Саша рассказывает,
+                      как попала в программу
+                      и как прошла 6-месячная
+                      стажировка в ISOFound</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 14 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--second-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/city-near-the-shore-desktop@1x.webp, ./img/news/city-near-the-shore-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/city-near-the-shore-tablet@1x.webp, ./img/news/city-near-the-shore-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/city-near-the-shore-mobile@1x.webp, ./img/news/city-near-the-shore-mobile@2x.webp 2x" width="290" height="240">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/city-near-the-shore-desktop@1x.jpg, ./img/news/city-near-the-shore-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/city-near-the-shore-tablet@1x.jpg, ./img/news/city-near-the-shore-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/city-near-the-shore-mobile@1x.jpg" srcset="./img/news/city-near-the-shore-mobile@2x.jpg 2x" width="290" height="240" alt="Город на побережье">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">20/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Путешествуем
+                      по миру</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Какие места посещают
+                      наши студенты весной</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 15 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--first-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/girl-with-a-volunteer-badge-desktop@1x.webp, ./img/news/girl-with-a-volunteer-badge-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.webp, ./img/news/girl-with-a-volunteer-badge-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.webp, ./img/news/girl-with-a-volunteer-badge-tablet@2x.webp 2x" width="290" height="330">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/girl-with-a-volunteer-badge-desktop@1x.jpg, ./img/news/girl-with-a-volunteer-badge-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.jpg, ./img/news/girl-with-a-volunteer-badge-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/girl-with-a-volunteer-badge-tablet@1x.jpg" srcset="./img/news/girl-with-a-volunteer-badge-tablet@2x.jpg 2x" width="290" height="330" alt="Девушка со значком 'Волонтер'">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">17/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Новая программа
+                      волонтёрства</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Программа помощи детям
+                      длительностью 4 месяца</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 16 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--second-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/working-table-desktop@1x.webp, ./img/news/working-table-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/working-table-tablet@1x.webp, ./img/news/working-table-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/working-table-tablet@1x.webp, ./img/news/working-table-tablet@2x.webp 2x" width="290" height="240">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/working-table-desktop@1x.jpg, ./img/news/working-table-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/working-table-tablet@1x.jpg, ./img/news/working-table-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/working-table-tablet@1x.jpg" srcset="./img/news/working-table-tablet@2x.jpg 2x" width="290" height="240" alt="Рабочий стол">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">10/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Построй свою
+                      карьеру</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Ведущие компании
+                      готовы трудоустроить
+                      выпускников стажировки</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 17 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--first-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/interview-with-intern-student-desktop@1x.webp, ./img/news/interview-with-intern-student-desktop@2x.webp 2x" width="604" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/interview-with-intern-student-tablet@1x.webp, ./img/news/interview-with-intern-student-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/interview-with-intern-student-mobile@1x.webp, ./img/news/interview-with-intern-student-mobile@2x.webp 2x" width="290" height="330">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/interview-with-intern-student-desktop@1x.jpg, ./img/news/interview-with-intern-student-desktop@2x.jpg 2x" width="604" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/interview-with-intern-student-tablet@1x.jpg, ./img/news/interview-with-intern-student-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/interview-with-intern-student-mobile@1x.jpg" srcset="./img/news/interview-with-intern-student-mobile@2x.jpg 2x" width="290" height="330" alt="Интервью с участницей программы стажировки">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span>23/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3>Интервью
+                      с участницей
+                      программы
+                      стажировки</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Саша рассказывает,
+                      как попала в программу
+                      и как прошла 6-месячная
+                      стажировка в ISOFound</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 18 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--second-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/city-near-the-shore-desktop@1x.webp, ./img/news/city-near-the-shore-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/city-near-the-shore-tablet@1x.webp, ./img/news/city-near-the-shore-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/city-near-the-shore-mobile@1x.webp, ./img/news/city-near-the-shore-mobile@2x.webp 2x" width="290" height="240">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/city-near-the-shore-desktop@1x.jpg, ./img/news/city-near-the-shore-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/city-near-the-shore-tablet@1x.jpg, ./img/news/city-near-the-shore-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/city-near-the-shore-mobile@1x.jpg" srcset="./img/news/city-near-the-shore-mobile@2x.jpg 2x" width="290" height="240" alt="Город на побережье">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">20/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Путешествуем
+                      по миру</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Какие места посещают
+                      наши студенты весной</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a clas="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 19 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--first-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/girl-with-a-volunteer-badge-desktop@1x.webp, ./img/news/girl-with-a-volunteer-badge-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.webp, ./img/news/girl-with-a-volunteer-badge-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.webp, ./img/news/girl-with-a-volunteer-badge-tablet@2x.webp 2x" width="290" height="330">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/girl-with-a-volunteer-badge-desktop@1x.jpg, ./img/news/girl-with-a-volunteer-badge-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.jpg, ./img/news/girl-with-a-volunteer-badge-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/girl-with-a-volunteer-badge-tablet@1x.jpg" srcset="./img/news/girl-with-a-volunteer-badge-tablet@2x.jpg 2x" width="290" height="330" alt="Девушка со значком 'Волонтер'">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">17/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Новая программа
+                      волонтёрства</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Программа помощи детям
+                      длительностью 4 месяца</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 20 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--second-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/working-table-desktop@1x.webp, ./img/news/working-table-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/working-table-tablet@1x.webp, ./img/news/working-table-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/working-table-tablet@1x.webp, ./img/news/working-table-tablet@2x.webp 2x" width="290" height="240">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/working-table-desktop@1x.jpg, ./img/news/working-table-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/working-table-tablet@1x.jpg, ./img/news/working-table-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/working-table-tablet@1x.jpg" srcset="./img/news/working-table-tablet@2x.jpg 2x" width="290" height="240" alt="Рабочий стол">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">10/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Построй свою
+                      карьеру</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Ведущие компании
+                      готовы трудоустроить
+                      выпускников стажировки</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 21 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--first-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/interview-with-intern-student-desktop@1x.webp, ./img/news/interview-with-intern-student-desktop@2x.webp 2x" width="604" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/interview-with-intern-student-tablet@1x.webp, ./img/news/interview-with-intern-student-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/interview-with-intern-student-mobile@1x.webp, ./img/news/interview-with-intern-student-mobile@2x.webp 2x" width="290" height="330">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/interview-with-intern-student-desktop@1x.jpg, ./img/news/interview-with-intern-student-desktop@2x.jpg 2x" width="604" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/interview-with-intern-student-tablet@1x.jpg, ./img/news/interview-with-intern-student-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/interview-with-intern-student-mobile@1x.jpg" srcset="./img/news/interview-with-intern-student-mobile@2x.jpg 2x" width="290" height="330" alt="Интервью с участницей программы стажировки">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span>23/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3>Интервью
+                      с участницей
+                      программы
+                      стажировки</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Саша рассказывает,
+                      как попала в программу
+                      и как прошла 6-месячная
+                      стажировка в ISOFound</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 22 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--second-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/city-near-the-shore-desktop@1x.webp, ./img/news/city-near-the-shore-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/city-near-the-shore-tablet@1x.webp, ./img/news/city-near-the-shore-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/city-near-the-shore-mobile@1x.webp, ./img/news/city-near-the-shore-mobile@2x.webp 2x" width="290" height="240">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/city-near-the-shore-desktop@1x.jpg, ./img/news/city-near-the-shore-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/city-near-the-shore-tablet@1x.jpg, ./img/news/city-near-the-shore-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/city-near-the-shore-mobile@1x.jpg" srcset="./img/news/city-near-the-shore-mobile@2x.jpg 2x" width="290" height="240" alt="Город на побережье">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">20/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Путешествуем
+                      по миру</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Какие места посещают
+                      наши студенты весной</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 23 -->
+            <div class="news__card swiper-slide" tabindex="0">
+              <div class="news__card-content news__card-content--first-card">
+                <div class="news__card-img-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/girl-with-a-volunteer-badge-desktop@1x.webp, ./img/news/girl-with-a-volunteer-badge-desktop@2x.webp 2x" width="286" height="400">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.webp, ./img/news/girl-with-a-volunteer-badge-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.webp, ./img/news/girl-with-a-volunteer-badge-tablet@2x.webp 2x" width="290" height="330">
+
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/news/girl-with-a-volunteer-badge-desktop@1x.jpg, ./img/news/girl-with-a-volunteer-badge-desktop@2x.jpg 2x" width="286" height="400">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/news/girl-with-a-volunteer-badge-tablet@1x.jpg, ./img/news/girl-with-a-volunteer-badge-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news/girl-with-a-volunteer-badge-tablet@1x.jpg" srcset="./img/news/girl-with-a-volunteer-badge-tablet@2x.jpg 2x" width="290" height="330" alt="Девушка со значком 'Волонтер'">
+                  </picture>
+                </div>
+                <div class="news__card-text-content">
+                  <div class="news__card-date-wrapper">
+                    <span class="news__card-date">17/03/2023</span>
+                  </div>
+                  <div class="news__card-title-wrapper">
+                    <h3 class="news__card-title title-reset">Новая программа
+                      волонтёрства</h3>
+                  </div>
+                  <div class="news__card-text-wrapper">
+                    <p>Программа помощи детям
+                      длительностью 4 месяца</p>
+                  </div>
+                  <div class="news__card-link-wrapper">
+                    <a class="news__card-link" href="#">
+                      <span class="visually-hidden">Открыть новость</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SLIDE 24 -->
             <div class="news__card swiper-slide" tabindex="0">
               <div class="news__card-content news__card-content--second-card">
                 <div class="news__card-img-wrapper">
@@ -714,10 +1247,6 @@
               </div>
             </div>
           </div>
-          <!-- PLACE FOR CLONED SLIDES -->
-          <!-- PLACE FOR CLONED SLIDES -->
-          <!-- PLACE FOR CLONED SLIDES -->
-          <!-- PLACE FOR CLONED SLIDES -->
           <div class="news__content-slider-buttons-wrapper">
             <button class="news__content-prev-slide swiper-button-prev" type="button">
               <span class="visually-hidden">Предыдущий слайд</span>
@@ -726,17 +1255,12 @@
               <span class="visually-hidden">Следующий слайд</span>
             </button>
           </div>
-          <div class="news__content-pagination swiper-pagination">
-            <button class="news__pagination-btn active" type="button">1</button>
-            <button class="news__pagination-btn" type="button">2</button>
-            <button class="news__pagination-btn" type="button">3</button>
-            <button class="news__pagination-btn" type="button">4</button>
-          </div>
+          <div class="news__content-pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
     <!-- FAQ -->
-    <section class="faq" data-test="FAQ">
+    <section class="faq" data-test="FAQ" if="faq">
       <div class="faq__wrapper">
         <h2 class="faq__title title-reset">Вопросы и ответы</h2>
         <div class="faq__accordion">
@@ -776,6 +1300,7 @@
             <h3>Признаётся ли учёба в рамках проекта<br> для дальнейшего обучения?</h3>
             <h3>Признаётся ли учёба в рамках проекта<br> для дальнейшего обучения?</h3>
             <h3>Признаётся ли учёба в рамках проекта<br> для дальнейшего обучения?</h3>
+            <h3>Признаётся ли учёба в рамках проекта<br> для дальнейшего обучения?</h3>
             <button type="button">
               <span class="visually-hidden">Открыть/закрыть ответ</span>
             </button>
@@ -795,7 +1320,7 @@
       </div>
     </section>
     <!-- REVIEWS -->
-    <section class="reviews" data-test="reviews">
+    <section class="reviews" data-test="reviews" id="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title title-reset">Отзывы</h2>
         <div class="reviews__swiper swiper">
@@ -905,7 +1430,7 @@
       </div>
     </section>
     <!-- CONTACTS -->
-    <section class="contacts" data-test="contacts">
+    <section class="contacts" data-test="contacts" id="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title title-reset">Контакты</h2>
         <ul class="contacts__info-list list-style-reset">
@@ -937,7 +1462,7 @@
       </div>
     </section>
     <!-- CONTACT US FORM -->
-    <section class="contact-us-form" data-test="form">
+    <section class="contact-us-form" data-test="form" id="contact-us-form">
       <div class="contact-us-form__wrapper">
         <div class="contact-us-form__form-wrapper">
           <h2 class="contact-us-form__title title-reset">Напишите нам</h2>
@@ -946,28 +1471,52 @@
           <form class="contact-us-form__form" method="post" action="https://echo.htmlacademy.ru" id="contact-us-form-form">
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--name">
               <label class="contact-us-form__label" for="contact-us-form-name">Имя</label>
-              <input class="contact-us-form__input" type="text" name="name" id="contact-us-form-name" required>
+              <input class="contact-us-form__input" type="text" name="contact-us-form-name" id="contact-us-form-name" required>
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--phone">
               <label class="contact-us-form__label" for="contact-us-form-phone">Телефон</label>
-              <input class="contact-us-form__input" type="tel" name="phone" id="contact-us-form-phone" required>
+              <input class="contact-us-form__input" type="tel" name="contact-us-form-phone" id="contact-us-form-phone" minlength="12" maxlength="12" required>
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--message">
               <label class="contact-us-form__label" for="contact-us-form-message">Ваше сообщение</label>
               <textarea class="contact-us-form__message" name="contact-us-form-message" id="contact-us-form-message"></textarea>
             </div>
+            <!-- SELECT -->
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--city">
               <label class="contact-us-form__label" for="contact-us-form-city">Выберите город</label>
+              <!-- CUSTOM SELECT -->
+              <div class="contact-us-form__custom-select">
+                <div class="contact-us-form__custom-select-selected" data-value="hidden" tabindex="0" id="contact-us-form-custom-select-input"></div>
+                <div class="contact-us-form__custom-select-items contact-us-form__custom-select-select-hidden">
+                  <div class="contact-us-form__custom-selec-item" data-value="Moscow" tabindex="0">Москва</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Saint-Petersburg" tabindex="0">Санкт-Петербург</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Novosibirsk" tabindex="0">Новосибирск</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Kazan" tabindex="0">Казань</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Moscow" tabindex="0">Москва</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Saint-Petersburg" tabindex="0">Санкт-Петербург</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Novosibirsk" tabindex="0">Новосибирск</div>
+                  <div class="contact-us-form__custom-selec-item" data-value="Kazan" tabindex="0">Казань</div>
+                </div>
+              </div>
+              <!-- ORIGINAL SELECT -->
               <select class="contact-us-form__select" name="city" id="contact-us-form-city" required>
                 <option class="contact-us-form__select-option" value="" selected hidden></option>
                 <option class="contact-us-form__select-option" value="Moscow">Москва</option>
                 <option class="contact-us-form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+                <option class="contact-us-form__select-option" value="Novosibirsk">Новосибирск</option>
+                <option class="contact-us-form__select-option" value="Kazan">Казань</option>
+                <option class="contact-us-form__select-option" value="Moscow">Москва</option>
+                <option class="contact-us-form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+                <option class="contact-us-form__select-option" value="Novosibirsk">Новосибирск</option>
+                <option class="contact-us-form__select-option" value="Kazan">Казань</option>
               </select>
+
             </div>
             <div class="contact-us-form__input-wrapper contact-us-form__input-wrapper--personal-data">
               <label class="contact-us-form__label contact-us-form__label--checkbox" for="contact-us-form-personal-data">Я согласен на обработку моих персональных<br> данных</label>
               <input class="contact-us-form__input contact-us-form__input--checkbox" type="checkbox" name="personal-data" id="contact-us-form-personal-data" required>
             </div>
+
             <button class="contact-us-form__button button" type="submit">отправить</button>
           </form>
         </div>
@@ -975,7 +1524,7 @@
     </section>
   </main>
   <!-- FOOTER -->
-  <footer class="footer" data-test="footer">
+  <footer class="footer" data-test="footer" id="footer">
     <div class="footer__wrapper">
       <h2 class="footer__title visually-hidden">Подвал сайта</h2>
       <div class="footer__image-wrapper">
@@ -987,22 +1536,22 @@
       </div>
       <ul class="footer__list list-style-reset">
         <li class="footer__item">
-          <a class="footer__link" href="#">О проекте</a>
+          <a class="footer__link" href="#about">О проекте</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Программы</a>
+          <a class="footer__link" href="#programs">Программы</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Как поехать</a>
+          <a class="footer__link" href="#grant">Как поехать</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Отзывы</a>
+          <a class="footer__link" href="#reviews">Отзывы</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Новости</a>
+          <a class="footer__link" href="#news">Новости</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Контакты</a>
+          <a class="footer__link" href="#contacts">Контакты</a>
         </li>
       </ul>
       <div class="footer__policy-and-copyright-wrapper">
@@ -1011,30 +1560,80 @@
       </div>
       <ul class="footer__social-list social-list list-style-reset">
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--vk" href="#" rel="noreferrer noopener" target="_blank">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/" rel="noreferrer noopener" target="_blank">
             <span class="visually-hidden">Мы Вконтакте</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--ok" href="#" rel="noreferrer noopener" target="_blank">
+          <a class="social-list__link social-list__link--ok" href="https://ok.ru/" rel="noreferrer noopener" target="_blank">
             <span class="visually-hidden">Мы в Одноклассниках</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--rd" href="#" rel="noreferrer noopener" target="_blank">
+          <a class="social-list__link social-list__link--rd" href="https://www.reddit.com/" rel="noreferrer noopener" target="_blank">
             <span class="visually-hidden">Мы на Reddit</span>
           </a>
         </li>
       </ul>
     </div>
   </footer>
+  <!-- MODAL WINDOW -->
+  <div class="about__modal-window modal-window">
+    <div class="modal-window__wrapper">
+      <button class="modal-window__button button" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+      <h3 class="modal-window__title title-reset">Напишите нам</h3>
+      <p class="modal-window__text text-offset-reset">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+      <!-- FORM -->
+      <form class="modal-window__form form" method="post" action="https://echo.htmlacademy.ru" id="about-form">
+        <div class="form__wrapper form__wrapper--name">
+          <label class="form__label" for="name">Имя</label>
+          <input class="form__input" type="text" name="name" id="name" required>
+        </div>
+        <div class="form__wrapper form__wrapper--phone">
+          <label class="form__label" for="phone">Телефон</label>
+          <input class="form__input" type="tel" name="phone" id="phone" minlength="12" maxlength="12" required>
+        </div>
+        <div class="form__wrapper form__wrapper--city">
+          <label class="form__label" for="city">Выберите город</label>
+          <!-- CUSTOM SELECT -->
+          <div class="form__custom-select">
+            <div class="form__custom-select-selected" data-value="hidden" tabindex="0" id="form-custom-select-input"></div>
+            <div class="form__custom-select-items form__custom-select-select-hidden">
+              <div class="form__custom-selec-item" data-value="Moscow" tabindex="0">Москва</div>
+              <div class="form__custom-selec-item" data-value="Saint-Petersburg" tabindex="0">Санкт-Петербург</div>
+              <div class="form__custom-selec-item" data-value="Novosibirsk" tabindex="0">Новосибирск</div>
+              <div class="form__custom-selec-item" data-value="Kazan" tabindex="0">Казань</div>
+              <div class="form__custom-selec-item" data-value="Moscow" tabindex="0">Москва</div>
+              <div class="form__custom-selec-item" data-value="Saint-Petersburg" tabindex="0">Санкт-Петербург</div>
+              <div class="form__custom-selec-item" data-value="Novosibirsk" tabindex="0">Новосибирск</div>
+              <div class="form__custom-selec-item" data-value="Kazan" tabindex="0">Казань</div>
+            </div>
+          </div>
+          <!-- ORIGINAL SELECT -->
+          <select class="form__select" name="city" id="city" required>
+            <option class="form__select-option" value="" selected hidden></option>
+            <option class="form__select-option" value="Moscow">Москва</option>
+            <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+            <option class="form__select-option" value="Novosibirsk">Новосибирск</option>
+            <option class="form__select-option" value="Kazan">Казань</option>
+            <option class="form__select-option" value="Moscow">Москва</option>
+            <option class="form__select-option" value="Saint-Petersburg">Санкт-Петербург</option>
+            <option class="form__select-option" value="Novosibirsk">Новосибирск</option>
+            <option class="form__select-option" value="Kazan">Казань</option>
+          </select>
+        </div>
+        <div class="form__wrapper form__wrapper--personal-data">
+          <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих персональных данных</label>
+          <input class="form__input form__input--checkbox" type="checkbox" name="personal-data" id="personal-data" required>
+        </div>
+        <button class="form__button button" type="submit">отправить</button>
+      </form>
+    </div>
+  </div>
+
   <script type="module" src="js/main.js"></script>
 </body>
-<!-- пример использования спрайта -->
-<!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-  <svg>
-    <use href="/__spritemap#sprite-user"></use>
-  </svg> -->
-<!-- примеры требуемых атрибутов data-test="*" -->
 
 </html>

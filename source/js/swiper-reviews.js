@@ -41,6 +41,8 @@ const reviewsSwiper = new Swiper ('.reviews__swiper', {
   },
 });
 
+reviewsSwiper.init();
+
 function cloneSlides() {
   const clonedSlides = swiperWrapper.querySelectorAll('.cloned-slide');
   clonedSlides.forEach((slide) => slide.remove());

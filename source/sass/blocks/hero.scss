@@ -12,144 +12,8 @@
   }
 }
 
-.hero__header {
-  display: grid;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4px 0;
-  width: 320px;
-  margin: 0 auto;
-  padding: 20px 15px 0;
-  background-color: transparent;
-
-  @media (min-width: $tablet-width) {
-    width: 768px;
-    padding: 30px 45px 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1440px;
-    padding: 30px 100px 0;
-  }
-}
-
-.hero__image-wrapper {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  padding: 1px 0;
-
-  @media (min-width: $tablet-width) {
-    padding: 2px 0;
-  }
-}
-
-.hero__image-wrapper img {
-  display: block;
-}
-
-.hero__menu-button {
-  position: relative;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  transition: width 0.3s ease, color 0.3s ease-in, background-color 0.3s ease;
-  width: 136px;
-  margin: 0 0 0 auto;
-  padding: 19px 71px 19px 20px;
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: 0.28px;
-  text-align: left;
-  border: 1px solid $primary-button-bg-color;
-  border-radius: 30px;
-
-  &::before {
-    @include pseudo(16px, 8px);
-
-    top: 50%;
-    right: 19px;
-    z-index: 2;
-    transform: translateY(-50%);
-    mask-image: url("/__spritemap#sprite-burger-menu-icon-view");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 100%;
-    transition: background-color 0.3s ease;
-    background-color: $secondary-button-bg-color;
-  }
-
-  &::after {
-    @include pseudo(46px, 46px);
-
-    top: 50%;
-    right: 4px;
-    transform: translateY(-50%);
-    transition: background-color 0.3s ease;
-    background-color: $primary-button-bg-color;
-    border-radius: 50%;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 20px 71px 20px 20px;
-  }
-}
-
-.hero__menu-button--open {
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
-  width: 100%;
-  background-color: $primary-button-bg-color;
-  color: $secondary-text-color;
-
-  &::before {
-    top: 50%;
-    right: 16px;
-    z-index: 2;
-    width: 20px;
-    height: 20px;
-    transform: translateY(-50%);
-    mask-image: url("/__spritemap#sprite-burger-menu-cross-icon-view");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 100%;
-    background-color: $primary-button-bg-color;
-  }
-
-  &::after {
-    background-color: $secondary-button-bg-color;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 286px;
-  }
-}
-
-.hero__navigation {
-  grid-column: 1 / 3;
-  grid-row: 2 / 3;
-  justify-self: flex-end;
-  width: 290px;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  padding: 33px 25px;
-  background-color: $accent-bg-color;
-  border-radius: 16px;
-}
-
-.hero__navigation--open {
-  overflow: visible;
-  max-height: 568px;
-  opacity: 1;
-}
-
 .hero__content-wrapper {
+  position: relative;
   min-height: 568px;
 
   @media (min-width: $tablet-width) {
@@ -178,6 +42,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  justify-content: flex-end;
   min-height: 568px;
   opacity: 1;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -221,6 +86,10 @@
   background-color: $disabled-color;
 }
 
+.hero__card-content-wrapper {
+  margin: 0 auto;
+}
+
 .hero__card-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -230,13 +99,13 @@
   width: 290px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 285px 266px;
+    grid-template-columns: 285px 373px;
     width: 659px;
     margin: auto 64px 60px 45px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 446px 276px;
+    grid-template-columns: 446px 521px;
     width: 968px;
     margin: auto 372px 60px 100px;
   }
@@ -376,6 +245,7 @@
   position: relative;
   width: 154px;
   padding: 16px 59px 14px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-family: $primary-font;
   font-size: 12px;
   line-height: 1;
@@ -394,6 +264,7 @@
     top: 50%;
     right: 4px;
     transform: translateY(-50%);
+    transition: background-color 0.3s ease;
     background-color: $primary-button-bg-color;
     border-radius: 50%;
   }
@@ -404,6 +275,7 @@
     top: 50%;
     right: 17px;
     transform: translateY(-50%);
+    transition: transform 0.3s ease, background-color 0.3s ease;
     mask-image: url("/__spritemap#sprite-arrow-icon-view");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -442,11 +314,11 @@
 }
 
 .hero__wrapper .hero__pagination {
-  top: 201px;
+  top: -28px;
   bottom: auto;
-  left: 15px;
+  left: 0;
   width: 80px;
-  padding: 4px 8px 6px;
+  padding: 2px 8px 8px;
   background-color: $secondary-bg-color;
   border-radius: 12px 12px 0 0;
 
@@ -463,10 +335,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    top: 647px;
-    left: 45px;
+    top: -40px;
     width: 100px;
-    padding: 12px 0 10px;
+    padding: 10px 0 12px;
     border-radius: 20px 20px 0 0;
 
     &::after {
@@ -475,11 +346,6 @@
       width: 20px;
       height: 20px;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 393px;
-    left: 100px;
   }
 }
 
@@ -502,6 +368,78 @@
   margin: 0 12px 0 0;
 }
 
+.hero__pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+  background-color: $primary-button-bg-color;
+  border-color: $secondary-button-bg-color;
+  opacity: 0.7;
+}
+
+.hero__pagination-bullet:not(.swiper-pagination-bullet-active):focus {
+  outline: none;
+  background-color: $primary-button-bg-color;
+  border-color: $primary-button-bg-color;
+}
+
 .hero__wrapper .hero__pagination .swiper-pagination-bullet-active {
-  background-color: $accent-bg-color;
+  background-color: $active-pagination-color;
+  border-color: $active-pagination-color;
+}
+
+.hero__wrapper .hero__pagination .hero__pagination-bullet:disabled,
+.hero__wrapper .hero__pagination .hero__pagination-bullet.disabled {
+  pointer-events: none;
+  background-color: $disabled-color;
+  border-color: $disabled-color;
+}
+
+.hero__card-button:hover {
+  color: $secondary-text-color;
+  background-color: $primary-button-bg-color;
+
+  &::before {
+    background-color: $secondary-button-bg-color;
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: $primary-button-bg-color;
+  }
+}
+
+.hero__card-button:focus {
+  outline: none;
+
+  &::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.hero__card-button:active {
+  color: $translucent-text-color;
+  background-color: $primary-button-bg-color;
+
+  &::before {
+    background-color: $secondary-button-bg-color;
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: $translucent-accent-text-color;
+  }
+}
+
+.hero__card-button:disabled,
+.hero__card-button.disabled {
+  pointer-events: none;
+  color: $disabled-color;
+  background-color: transparent;
+  border-color: $disabled-color;
+
+  &::before {
+    background-color: $disabled-color;
+  }
+
+  &::after {
+    background-color: $secondary-button-bg-color;
+  }
 }
