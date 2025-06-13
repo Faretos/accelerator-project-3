@@ -130,3 +130,4 @@ customCitySelectInput.addEventListener('click', () => {
     customSelectErrorRemover();
   }
 });
+

@@ -91,7 +91,7 @@
 
 .grant__img-wrapper img {
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   box-sizing: border-box;
   border-radius: 16px;
   background-color: $primary-bg-color;

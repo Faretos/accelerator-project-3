@@ -154,43 +154,12 @@
     opacity: 0.2;
   }
 
-  &::after {
-    @include pseudo(18px, 25px);
-
-    top: 45px;
-    left: 143px;
-    z-index: 2;
-    mask-image: url("/__spritemap#sprite-contacts-map-pin-view");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 100%;
-    background-color: $primary-button-bg-color;
-  }
-
-  @media (min-width: $tablet-width) {
-    &::after {
-      top: 106px;
-      left: 344px;
-
-      width: 30px;
-      height: 44px;
-    }
-  }
-
   @media (min-width: $desktop-width) {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
 
     &::before {
       top: -42px;
-    }
-
-    &::after {
-      top: 74px;
-      left: 617px;
-
-      width: 52px;
-      height: 74px;
     }
   }
 }

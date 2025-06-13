@@ -36,6 +36,7 @@ const heroSwiper = new Swiper ('.hero__wrapper', {
     1440: {
       slidesPerView: 1,
       spaceBetween: 0,
+      allowTouchMove: false,
     },
   },
 });
