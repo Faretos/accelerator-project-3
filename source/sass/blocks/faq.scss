@@ -300,6 +300,10 @@
   border-color: $active-pagination-color;
 }
 
+.faq__accordion-item.active:active h3 {
+  color: $secondary-text-color;
+}
+
 .faq__accordion-item.active:active button {
   background-color: $secondary-bg-color;
   border-color: $secondary-bg-color;
